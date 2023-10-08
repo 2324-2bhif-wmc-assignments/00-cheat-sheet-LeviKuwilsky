@@ -1,0 +1,21 @@
+* {
+    color: lightgray;
+    font-family: Bahnschrift, serif;
+    font-weight: lighter;
+    background-color: #0b1216;
+}
+
+h3 {
+    color: #a2d2ff;
+}
+
+h2 {
+    color: #bde0fe;
+    font-weight: bold;
+}
+
+.main-title {
+    font-weight: bold;
+    font-size: xxx-large;
+    color: #ffafcc;
+}
