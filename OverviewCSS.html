@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Overview of CSS</title>
+
+    <link type="text/css" rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <h1 class="main-title">Overview of CSS</h1>
+
+    <hr>
+
+    <h2>Syntax</h2>
+    <hr>
+    <h3>Summary</h3>
+    <p>
+        <img src="img_selector.gif" alt="Image of selector">
+    </p>
+    <hr>
+
+    <h2>Selectors</h2>
+    <hr>
+    <h3>Summary</h3>
+    <ul>
+        <li><strong>#id</strong> - #firstname - Selects the element with id="firstname"</li>
+        <li><strong>.class</strong> - .intro - Selects all elements with class="intro"</li>
+        <li><strong>element.class</strong> - p.intro - Selects only &lt;p&gt; elements with class "intro"</li>
+        <li><strong>*</strong> - * - Selects all elements</li>
+        <li><strong>element</strong> - p - Selects all &lt;p&gt; elements</li>
+        <li><strong>element,element,..</strong> - div, p - Selects all &lt;div&gt; elements and all &lt;p&gt; elements</li>
+    </ul>
+    <hr>
+
+    <h2>Comments</h2>
+    <hr>
+    <h3>Summary</h3>
+    <div class="code-box">
+        <pre>
+            <code>
+                /* This is a single-line comment. */
+            </code>
+        </pre>
+    </div>
+    <hr>
+
+    <h2>Colours</h2>
+    <hr>
+    <h3>Summary</h3>
+    <p>
+        In CSS, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values. (140 standart colours)<br><br>
+
+        HEX Value: <br>
+        In CSS, a color can be specified using a hexadecimal value in the form: #rrggbb <br>
+        Where rr (red), gg (green) and bb (blue) are hexadecimal values between 00 and ff (same as decimal 0-255).<br>
+        For example, #ff0000 is displayed as red, because red is set to its highest value (ff) and the others are set to the lowest value (00).<br>
+        To display black, set all values to 00, like this: #000000.<br>
+        To display white, set all values to ff, like this: #ffffff.<br>
+    </p>
+    <hr>
+
+    <h2>Background</h2>
+    <hr>
+    <h3>Summary</h3>
+    <ul>
+        <li>background-color
+        <li>background-image
+        <li>background-repeat
+        <li>background-attachment
+        <li>background-position
+        <li>background (shorthand property)
+    </ul>
+    <div class ="code-box">
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                  &lt;html&gt;
+                  &lt;head&gt;
+                    &lt;style&gt;
+                      /* CSS for background properties */
+                      .background {
+                        background-color: #ff9900; /* Background Color */
+                        background-image: url('background.jpg'); /* Background Image */
+                        background-repeat: no-repeat; /* Background Image - No Repeat */
+                        background-repeat: repeat-x; /* Background Image - Repeat Horizontally */
+                        background-repeat: repeat-y; /* Background Image - Repeat Vertically */
+                        background-attachment: fixed; /* Background Image - Fixed Position */
+                      }
+                    &lt;/style&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    &lt;div class="background"&gt;
+                                &lt;!-- Your content here --&gt;
+                    &lt;/div&gt;
+                  &lt;/body&gt;
+                  &lt;/html&gt;
+            </code>
+        </pre>
+    </div>
+    <hr>
+
+    <h2>Text</h2>
+    <hr>
+    <h3>Summary</h3>
+    <ul>
+        <li> Text Color: Use the `color` property to set the color of text within an HTML element.
+        <li> Text Alignment: Control the horizontal alignment of text with the `text-align` property.
+        <li> Text Decoration: Add decorative elements to text, such as underlines or overlines, using the `text-decoration` property.
+        <li> Text Transformation: Change the capitalization of text with the `text-transform` property, allowing you to apply uppercase, lowercase, or capitalize the first letter of each word.
+    </ul>
+    <div class = "code-box">
+       <pre>
+           <code>
+               /* CSS for text properties *
+               .text-example {
+               color: blue; /* Text Color */
+               text-align: center; /* Text Alignment */
+               text-decoration: underline; /* Text Decoration */
+               text-transform: uppercase; /* Text Transformation */
+               }
+           </code>
+       </pre>
+    </div>
+    <hr>
+
+    <h2>Font</h2>
+    <hr>
+    <h3>Summary</h3>
+    <ul>
+        <li> Fonts: Concentrate on
+        <li> Difference Between Serif and Sans-serif Fonts
+        <li> Font Family: Define the typeface for text using the `font-family` property.
+        <li> Font Style: Set the style of the font, such as italic or oblique, with the `font-style` property.
+        <li> Font Size: Adjust the size of the font using the `font-size` property.
+        <li> Set Font Size With Pixels: Specify the font size using pixels (e.g., `16px`).
+        <li> Set Font Size With Em: Specify the font size using relative units like `em`.
+        <li> Font Weight: Control the thickness of the font characters using the `font-weight` property.
+    </ul>
+
+    <div class = "code-box">
+        <pre>
+            <code>
+                /* Serif Font Family */
+                .serif {
+                  font-family: "Georgia", "Times New Roman", serif;
+                }
+
+                /* Sans-serif Font Family */
+                .sans-serif {
+                  font-family: "Arial", "Helvetica", sans-serif;
+                }
+
+                /* Italic Font Style */
+                .italic {
+                  font-style: italic;
+                }
+
+                /* Font Size in Pixels */
+                .font-size-pixels {
+                  font-size: 16px;
+                }
+
+                /* Font Size in Em */
+                .font-size-em {
+                  font-size: 1.2em;
+                }
+
+                /* Font Weight - Bold */
+                .bold {
+                  font-weight: bold;
+                }
+            </code>
+        </pre>
+    </div>
+    <hr>
+
+    <h2>links</h2>
+    <hr>
+    <h3>Summary</h3>
+    <ul>
+        Link: Concentrate on the section Styling Links only. It nicely summarizes the pseudo-selectors for links.
+
+        <li> :link - This pseudo-selector is used to target unvisited links (links that the user has not clicked).
+        <li> :visited - Targets visited links (links that the user has clicked).
+        <li> :hover - Styles the link when the mouse cursor hovers over it.
+        <li> :active - Applies styles to the link when it is being activated (e.g., clicked).
+        <li> :focus - Styles the link when it gains focus, such as when navigating with the keyboard.
+    </ul>
+
+    <div class = "code-box">
+        <pre>
+            <code>
+                /* CSS for styling links */
+                  a:link {
+                    color: blue; /* Unvisited link color */
+                    text-decoration: none; /* Remove underline */
+                  }
+
+                  a:visited {
+                    color: purple; /* Visited link color */
+                  }
+
+                  a:hover {
+                    color: red; /* Hover color */
+                  }
+
+                  a:active {
+                    color: green; /* Active (clicked) link color */
+                  }
+
+                  a:focus {
+                    outline: 2px solid orange; /* Add focus outline */
+                  }
+            </code>
+        </pre>
+    </div>
+    <hr>
+
+    <h2>Combinators</h2>
+    <hr>
+    <h3>Summary</h3>
+    <ul>
+        <li>
+            **Descendant Combinator (Whitespace):**
+            - Symbol: (space)
+            - Description: Selects elements that are descendants of another element. It matches all instances where the right-hand element is contained within the left-hand element, no matter how deep.
+        </li>
+        <li>
+            **Child Combinator (>):**
+            - Symbol: `>`
+            - Description: Selects elements that are a direct child of another element. It matches elements that are immediately nested within the parent element.
+        </li>
+        <li>
+            **Adjacent Sibling Combinator (+):**
+            - Symbol: `+`
+            - Description: Selects an element that is immediately preceded by another element. It matches the element that shares the same parent and appears directly after the specified element.
+        </li>
+        <li>
+            **General Sibling Combinator (~):**
+            - Symbol: `~`
+            - Description: Selects elements that are siblings of another element and share the same parent. It matches elements that appear anywhere after the specified element.
+        </li>
+    </ul>
+    <div class = "code-box">
+        <pre>
+            <code>
+                /* Examples */
+                  div p {
+                    /* Selects all &lt;p&gt; elements within a &lt;div&gt; */
+                  }
+
+                  ul > li {
+                    /* Selects all &lt;li&gt; elements that are direct children of a &lt;ul&gt; */
+                  }
+
+                  h2 + p {
+                    /* Selects a &lt;p&gt; element that directly follows an &lt;h2&gt; */
+                  }
+
+                  h2 ~ p {
+                    /* Selects all &lt;p&gt; elements that are siblings of an &lt;h2&gt; */
+                  }
+            </code>
+        </pre>
+    </div>
+    <hr>
+
+    <h2>Pseudo Classes</h2>
+    <hr>
+    <h3>Summary</h3>
+    <ul>
+        <li>Syntax: Pseudo-classes in CSS are used to define special states of elements. They are preceded by a colon (":") and allow for the styling of elements based on their relationships and interaction states.
+        <li>Anchor Pseudo-classes: Pseudo-classes related to anchor (&lt;a&gt;) elements are commonly used to style links. These include :link, which selects unvisited links, and :visited, which selects visited links. Additionally, the :hover pseudo-class is used to style links when they are hovered over by the cursor.
+        <li>CSS - The :first-child Pseudo-class: The :first-child pseudo-class selects the first child element within its parent. It is useful for styling the first occurrence of an element within a container.
+        Pseudo-classes provide a powerful way to apply styles to elements based on their relationships and user interaction, allowing for dynamic and targeted styling of web content.
+    </ul>
+    <hr>
+
+    <h2>Parent and Child</h2>
+    <hr>
+    <h3>Summary</h3>
+    <p>
+        Parent Element: <br>
+        A parent element is an HTML element that contains one or more child elements. In the HTML document's structure, parent elements enclose or "contain" child elements. For example, a &lt;div&gt; element containing several &lt;p&gt; elements makes the &lt;div&gt; the parent element of those &lt;p&gt; elements.<br>
+        Child Element: <br>
+        A child element is an HTML element that is contained within a parent element. Child elements are nested within their parent elements. For example, within a &lt;ul&gt; (unordered list) element, each &lt;li&gt; (list item) is a child element of the &lt;ul&gt;.
+    </p>
+</body>
+</html>

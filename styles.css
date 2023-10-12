@@ -1,6 +1,6 @@
 * {
     color: lightgray;
-    font-family: Bahnschrift, serif;
+    font-family: avenir, serif;
     font-weight: lighter;
     background-color: #0b1216;
 }
@@ -17,5 +17,23 @@ h2 {
 .main-title {
     font-weight: bold;
     font-size: xxx-large;
-    color: #ffafcc;
+    color: white;
+    text-shadow: 7.5px 7.5px 7.5px #ffafcc;
+}
+
+.code-box {
+    background-color: #0b1216;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+pre {
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+code {
+    font-family: "Courier New", Courier, monospace;
+    color: lightgray;
 }

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Overview of HTML</title>
+
+    <link type="text/css" rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <h1 class="main-title">Overview of HTML</h1>
+
+    <hr>
+
+    <h2>Basics</h2>
+
+    <hr>
+
+    <hr>
+
+    <h2>HTML elements</h2>
+    <hr>
+    <h3>Tags</h3>
+    <ol>
+        <li>&lt;html&gt; - Defines the root of an HTML document</li>
+        <li>&lt;body&gt; - Defines the document's body</li>
+        <li>&lt;h1&gt; - to &lt;h6&gt; Defines HTML headings</li>
+        <li>&lt;br&gt; - defines a line break</li>
+    </ol>
+    <hr>
+
+    <h2>Attributes</h2>
+    <hr>
+    <h3>Summary</h3>
+    <ol>
+        <li>All HTML elements can have attributes</li>
+        <li>The href attribute of &lt;a&gt; specifies the URL of the page the link goes to</li>
+        <li>The src attribute of &lt;img&gt; specifies the path to the image to be displayed</li>
+        <li>The width and height attributes of &lt;img&gt; provide size information for images</li>
+        <li>The alt attribute of &lt;img&gt; provides an alternate text for an image</li>
+        <li>The style attribute is used to add styles to an element, such as color, font, size, and more</li>
+        <li>The lang attribute of the &lt;html&gt; tag declares the language of the Web page</li>
+        <li>The title attribute defines some extra information about an element</li>
+
+        <div class="code-box">
+            <pre>
+                <code>
+                &lt;a href="https://www.example.com"&gt;Visit Example Website&lt;/a&gt;
+                &lt;img src="image.jpg" alt="A sample image"&gt;
+                &lt;img src="image.jpg" alt="A sample image" width="200" height="150"&gt;
+                &lt;img src="image.jpg" alt="A beautiful sunset at the beach"&gt;
+                &lt;p style="color: red; font-size: 18px;"&gt;This is a red and large text.&lt;/p&gt;
+                &lt;html lang="en"&gt;
+                    &lt;!-- Your webpage content here --&gt;
+                &lt;/html&gt;
+                &lt;a href="https://www.example.com" title="Visit Example Website"&gt;Link to Example&lt;/a&gt;
+                </code>
+            </pre>
+        </div>
+    </ol>
+    <hr>
+
+    <h2>Headings</h2>
+    <hr>
+    <h3>Tags</h3>
+    <ol>
+        <li>&lt;html&gt; - Defines the root of an HTML document</li>
+        <li>&lt;body&gt; - Defines the document's body</li>
+        <li>&lt;h1&gt; to &lt;h6&gt; - Defines HTML headings</li>
+    </ol>
+    <hr>
+
+    <h2>Paragraphs</h2>
+    <hr>
+    <h3>Tags</h3>
+    <ol>
+        <li>&lt;p&gt; - Defines a paragraph</li>
+        <li>&lt;hr&gt; - Defines a thematic change in the content</li>
+        <li>&lt;br&gt; - Inserts a single line break</li>
+        <li>&lt;pre&gt; - Defines pre-formatted text</li>
+    </ol>
+    <hr>
+
+    <h2>Comments</h2>
+    <hr>
+
+    <pre>
+        <code>
+            &lt;p&gt;This &lt;!-- great text --&gt; is a paragraph.&lt;/p&gt;
+        </code>
+    </pre>
+
+    <hr>
+
+    <h2>Links</h2>
+    <hr>
+    <h3>Summary</h3>
+    <ol>
+        <li>Use the &lt;a&gt; element to define a link</li>
+        <li>Use the href attribute to define the link address</li>
+        <li>Use the target attribute to define where to open the linked document</li>
+        <li>Use the &lt;img&gt; element (inside &lt;a&gt;) to use an image as a link</li>
+        <li>Use the mailto: scheme inside the href attribute to create a link that opens the user's email program</li>
+
+        <div class="code-box">
+        <pre>
+            <code>
+                &lt;a href="https://www.example.com"&gt;Visit Example Website&lt;/a&gt;
+                &lt;a href="https://www.example.com"&gt;Visit Example Website&lt;/a&gt;
+                &lt;a href="https://www.example.com" target="_blank"&gt;Visit Example Website (Opens in a new tab)&lt;/a&gt;
+                &lt;a href="https://www.example.com"&gt;
+                  &lt;img src="image.jpg" alt="An image link to Example Website"&gt;
+                &lt;/a&gt;
+                &lt;a href="mailto:example@example.com"&gt;Send Email to Example&lt;/a&gt;
+            </code>
+        </pre>
+        </div>
+    </ol>
+    <h3>Tags</h3>
+    <ol>
+        <li>&lt;a&gt; - Defines a hyperlink</li>
+    </ol>
+    <hr>
+
+    <h2>Images</h2>
+    <hr>
+    <h3>Image types</h3>
+    <ol>
+        <li>APNG - Animated Portable Network Graphics - .apng</li>
+        <li>GIF - Graphics Interchange Format - .gif</li>
+        <li>ICO - Microsoft Icon - .ico, .cur</li>
+        <li>JPEG - Joint Photographic Expert Group image - .jpg, .jpeg, .jfif, .pjpeg, .pjp</li>
+        <li>PNG - Portable Network Graphics - .png</li>
+        <li>SVG - Scalable Vector Graphics - .svg</li>
+    </ol>
+    <h3>Summary</h3>
+    <ol>
+        <li>Use the &lt;img&gt; element to define an image</li>
+        <li>Use the src attribute to define the URL of the image</li>
+        <li>Use the alt attribute to define an alternate text for an image, if it cannot be displayed</li>
+        <li>Use the width and height attributes or the CSS width and height properties to define the size of the image</li>
+        <li>Use the CSS float property to let the image float to the left or to the right</li>
+
+        <div class="code-box">
+        <pre>
+            <code>
+                &lt;img src="image.jpg" alt="A sample image"&gt;
+                &lt;img src="image.jpg" alt="A sample image"&gt;
+                &lt;img src="image.jpg" alt="A sample image"&gt;
+                &lt;img src="image.jpg" alt="A sample image" width="200" height="150"&gt;
+                &lt;img src="image.jpg" alt="A sample image" style="float: left;"&gt;
+            </code>
+        </pre>
+        </div>
+    </ol>
+    <hr>
+
+    <h2>Head</h2>
+    <hr>
+    <h3>Summary</h3>
+    <ol>
+        <li>The &lt;head&gt; element is a container for metadata (data about data)</li>
+        <li>The &lt;head&gt; element is placed between the &lt;html&gt; tag and the &lt;body&gt; tag</li>
+        <li>The &lt;title&gt; element is required and it defines the title of the document</li>
+        <li>The &lt;style&gt; element is used to define style information for a single document</li>
+        <li>The &lt;link&gt; tag is most often used to link to external style sheets</li>
+        <li>The &lt;meta&gt; element is typically used to specify the character set, page description, keywords, author of the document, and viewport settings</li>
+        <li>The &lt;script&gt; element is used to define client-side JavaScripts</li>
+        <li>The &lt;base&gt; element specifies the base URL and/or target for all relative URLs in a page</li>
+    </ol>
+    <h3>Tags</h3>
+    <ol>
+        <li>&lt;head&gt; - Defines information about the document</li>
+        <li>&lt;title&gt; - Defines the title of a document</li>
+        <li>&lt;base&gt; - Defines a default address or a default target for all links on a page</li>
+        <li>&lt;link&gt; - Defines the relationship between a document and an external resource</li>
+        <li>&lt;meta&gt; - Defines metadata about an HTML document</li>
+        <li>&lt;script&gt; - Defines a client-side script</li>
+        <li>&lt;style&gt; - Defines style information for a document</li>
+    </ol>
+    <hr>
+
+</body>
+</html>
