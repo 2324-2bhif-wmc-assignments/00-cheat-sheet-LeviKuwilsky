@@ -2,289 +2,440 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <title>Overview of CSS</title>
-
-    <link type="text/css" rel="stylesheet" href="./styles.css" />
+    <title>Cheat Sheet</title>
+    <link type="text/css" rel="stylesheet" href="styles.css" />
 </head>
-<body>
+
+<body class="side-thing">
+<div class="sidebar-main">
+    <ul class="menu">
+        <li><div class="main-title">Cheat Sheet</div></li>
+        <li><a href="General.html">General</a></li>
+        <li><a href="OverviewHTML.html">Overview of HTML</a></li>
+        <li><a href="OverviewCSS.html">Overview of CSS</a></li>
+        <!--li><a href="HTMLAndCssBasics.html">The Basics/a/li-->
+        <li><a href="CheatSheet.html">Home</a></li>
+    </ul>
+</div>
+
+<div class="sidebar">
     <h1 class="main-title">Overview of CSS</h1>
-
     <hr>
-
-    <h2>Syntax</h2>
-    <hr>
-    <h3>Summary</h3>
-    <p>
-        <img src="img_selector.gif" alt="Image of selector">
-    </p>
-    <hr>
-
-    <h2>Selectors</h2>
-    <hr>
-    <h3>Summary</h3>
-    <ul>
-        <li><strong>#id</strong> - #firstname - Selects the element with id="firstname"</li>
-        <li><strong>.class</strong> - .intro - Selects all elements with class="intro"</li>
-        <li><strong>element.class</strong> - p.intro - Selects only &lt;p&gt; elements with class "intro"</li>
-        <li><strong>*</strong> - * - Selects all elements</li>
-        <li><strong>element</strong> - p - Selects all &lt;p&gt; elements</li>
-        <li><strong>element,element,..</strong> - div, p - Selects all &lt;div&gt; elements and all &lt;p&gt; elements</li>
+    <ul class="menu">
+        <li><a href="#syntax">Syntax</a></li>
+        <li><a href="#selectors">Selectors</a></li>
+        <li><a href="#comments">Comments</a></li>
+        <li><a href="#colors">Colors</a></li>
+        <li><a href="#background">Background</a></li>
+        <li><a href="#text">Text</a></li>
+        <li><a href="#font">Font</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#combinators">Combinators</a></li>
+        <li><a href="#pseudo-classes">Pseudo Classes</a></li>
+        <li><a href="#parent-child">Parent and Child</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#tables">Tables</a></li>
     </ul>
     <hr>
+</div>
 
-    <h2>Comments</h2>
-    <hr>
-    <h3>Summary</h3>
-    <div class="code-box">
-        <pre>
-            <code>
-                /* This is a single-line comment. */
-            </code>
-        </pre>
-    </div>
-    <hr>
+<div class="content">
+    <section id="syntax">
+        <br>
+        <br>
+        <h2>Syntax</h2>
+        <hr>
+        <h3>Summary</h3>
+        <p>
+            In CSS, the syntax defines the rules for writing CSS code. It consists of a selector and a declaration block enclosed in curly braces.
+            <img src="img_selector.gif" alt="Image of selector">
+        </p>
+    </section>
 
-    <h2>Colours</h2>
-    <hr>
-    <h3>Summary</h3>
-    <p>
-        In CSS, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values. (140 standart colours)<br><br>
+    <section id="selectors">
+        <h2>Selectors</h2>
+        <hr>
+        <h3>Summary</h3>
+        <ul>
+            <li><span class="code-keyword">#id</span> - #firstname - Selects the element with id="firstname"</li>
+            <li><span class="code-keyword">.class</span> - .intro - Selects all elements with class="intro"</li>
+            <li><span class="code-keyword">element.class</span> - p.intro - Selects only &lt;p&gt; elements with class "intro"</li>
+            <li><span class="code-keyword">*</span> - * - Selects all elements</li>
+            <li><span class="code-keyword">element</span> - p - Selects all &lt;p&gt; elements</li>
+            <li><span class="code-keyword">element,element,..</span> - div, p - Selects all &lt;div&gt; elements and all &lt;p&gt; elements</li>
+        </ul>
+    </section>
 
-        HEX Value: <br>
-        In CSS, a color can be specified using a hexadecimal value in the form: #rrggbb <br>
-        Where rr (red), gg (green) and bb (blue) are hexadecimal values between 00 and ff (same as decimal 0-255).<br>
-        For example, #ff0000 is displayed as red, because red is set to its highest value (ff) and the others are set to the lowest value (00).<br>
-        To display black, set all values to 00, like this: #000000.<br>
-        To display white, set all values to ff, like this: #ffffff.<br>
-    </p>
-    <hr>
+    <br>
 
-    <h2>Background</h2>
-    <hr>
-    <h3>Summary</h3>
-    <ul>
-        <li>background-color
-        <li>background-image
-        <li>background-repeat
-        <li>background-attachment
-        <li>background-position
-        <li>background (shorthand property)
-    </ul>
-    <div class ="code-box">
-        <pre>
-            <code>
-                &lt;!DOCTYPE html&gt;
-                  &lt;html&gt;
-                  &lt;head&gt;
-                    &lt;style&gt;
-                      /* CSS for background properties */
-                      .background {
-                        background-color: #ff9900; /* Background Color */
-                        background-image: url('background.jpg'); /* Background Image */
-                        background-repeat: no-repeat; /* Background Image - No Repeat */
-                        background-repeat: repeat-x; /* Background Image - Repeat Horizontally */
-                        background-repeat: repeat-y; /* Background Image - Repeat Vertically */
-                        background-attachment: fixed; /* Background Image - Fixed Position */
-                      }
-                    &lt;/style&gt;
-                  &lt;/head&gt;
-                  &lt;body&gt;
-                    &lt;div class="background"&gt;
-                                &lt;!-- Your content here --&gt;
-                    &lt;/div&gt;
-                  &lt;/body&gt;
-                  &lt;/html&gt;
-            </code>
-        </pre>
-    </div>
-    <hr>
+    <section id="comments">
+        <h2>Comments</h2>
+        <hr>
+        <h3>Summary</h3>
+        <div class="code-box">
+            <pre>
+                <code class="language-html">
+                    <span class="code-comment">/* This is a single-line comment. */</span>
+                </code>
+            </pre>
+        </div>
+    </section>
 
-    <h2>Text</h2>
-    <hr>
-    <h3>Summary</h3>
-    <ul>
-        <li> Text Color: Use the `color` property to set the color of text within an HTML element.
-        <li> Text Alignment: Control the horizontal alignment of text with the `text-align` property.
-        <li> Text Decoration: Add decorative elements to text, such as underlines or overlines, using the `text-decoration` property.
-        <li> Text Transformation: Change the capitalization of text with the `text-transform` property, allowing you to apply uppercase, lowercase, or capitalize the first letter of each word.
-    </ul>
-    <div class = "code-box">
-       <pre>
-           <code>
-               /* CSS for text properties *
-               .text-example {
-               color: blue; /* Text Color */
-               text-align: center; /* Text Alignment */
-               text-decoration: underline; /* Text Decoration */
-               text-transform: uppercase; /* Text Transformation */
-               }
-           </code>
-       </pre>
-    </div>
-    <hr>
+    <br>
 
-    <h2>Font</h2>
-    <hr>
-    <h3>Summary</h3>
-    <ul>
-        <li> Fonts: Concentrate on
-        <li> Difference Between Serif and Sans-serif Fonts
-        <li> Font Family: Define the typeface for text using the `font-family` property.
-        <li> Font Style: Set the style of the font, such as italic or oblique, with the `font-style` property.
-        <li> Font Size: Adjust the size of the font using the `font-size` property.
-        <li> Set Font Size With Pixels: Specify the font size using pixels (e.g., `16px`).
-        <li> Set Font Size With Em: Specify the font size using relative units like `em`.
-        <li> Font Weight: Control the thickness of the font characters using the `font-weight` property.
-    </ul>
+    <section id="colors">
+        <h2>Colours</h2>
+        <hr>
+        <h3>Summary</h3>
+        <p>
+            In CSS, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values. (140 standart colours)<br><br>
 
-    <div class = "code-box">
-        <pre>
-            <code>
-                /* Serif Font Family */
-                .serif {
-                  font-family: "Georgia", "Times New Roman", serif;
-                }
+            HEX Value: <br>
+            In CSS, a color can be specified using a hexadecimal value in the form: #rrggbb <br>
+            Where rr (red), gg (green) and bb (blue) are hexadecimal values between 00 and ff (same as decimal 0-255).<br>
+            For example, #ff0000 is displayed as red, because red is set to its highest value (ff) and the others are set to the lowest value (00).<br>
+            To display black, set all values to 00, like this: #000000.<br>
+            To display white, set all values to ff, like this: #ffffff.<br>
+        </p>
+    </section>
 
-                /* Sans-serif Font Family */
-                .sans-serif {
-                  font-family: "Arial", "Helvetica", sans-serif;
-                }
+    <br>
 
-                /* Italic Font Style */
-                .italic {
-                  font-style: italic;
-                }
+    <section id="background">
+        <h2>Background</h2>
+        <hr>
+        <h3>Summary</h3>
+        <ul>
+            <li>background-color</li>
+            <li>background-image</li>
+            <li>background-repeat</li>
+            <li>background-attachment</li>
+            <li>background-position</li>
+            <li>background (shorthand property)</li>
+        </ul>
+        <div class="code-box">
+            <pre>
+                <code>
+                  &lt;!DOCTYPE html&gt;
+                  <span class="code-keyword">&lt;html&gt;</span>
+                  <span class="code-keyword">&lt;head&gt;</span>
+                    <span class="code-keyword">&lt;style&gt;</span>
+                      <span class="code-comment">/* CSS for background properties */</span>
+                      <span class="code-keyword">.background {</span>
+                        background-color: #ff9900; <span class="code-comment">/* Background Color */</span>
+                        background-image: url('background.jpg'); <span class="code-comment">/* Background Image */</span>
+                        background-repeat: no-repeat; <span class="code-comment">/* Background Image - No Repeat */</span>
+                        background-repeat: repeat-x; <span class="code-comment">/* Background Image - Repeat Horizontally */</span>
+                        background-repeat: repeat-y; <span class="code-comment">/* Background Image - Repeat Vertically */</span>
+                        background-attachment: fixed; <span class="code-comment">/* Background Image - Fixed Position */</span>
+                      <span class="code-keyword">}</span>
+                    <span class="code-keyword">&lt;/style&gt;</span>
+                  <span class="code-keyword">&lt;/head&gt;</span>
+                  <span class="code-keyword">&lt;body&gt;</span>
+                    <span class="code-keyword">&lt;div class="background"&gt;</span>
+                                <span class="code-comment">&lt;!-- Your content here --&gt;</span>
+                    <span class="code-keyword">&lt;/div&gt;</span>
+                  <span class="code-keyword">&lt;/body&gt;</span>
+                  <span class="code-keyword">&lt;/html&gt;</span>
+                </code>
+            </pre>
+        </div>
+    </section>
 
-                /* Font Size in Pixels */
-                .font-size-pixels {
-                  font-size: 16px;
-                }
+    <br>
 
-                /* Font Size in Em */
-                .font-size-em {
-                  font-size: 1.2em;
-                }
+    <section id="text">
+        <h2>Text</h2>
+        <hr>
+        <h3>Summary</h3>
+        <ul>
+            <li> <strong>Text Color:</strong> Use the `color` property to set the color of text within an HTML element.
+            <li> <strong>Text Alignment:</strong> Control the horizontal alignment of text with the `text-align` property.
+            <li> <strong>Text Decoration:</strong> Add decorative elements to text, such as underlines or overlines, using the `text-decoration` property.
+            <li> <strong>Text Transformation:</strong> Change the capitalization of text with the `text-transform` property, allowing you to apply uppercase, lowercase, or capitalize the first letter of each word.
+        </ul>
+        <div class="code-box">
+            <pre>
+                <code>
+                    <span class="code-comment">/* CSS for text properties */</span>
+                    <span class="code-keyword">.text-example {</span>
+                    color: blue; <span class="code-comment">/* Text Color */</span>
+                    text-align: center; <span class="code-comment">/* Text Alignment */</span>
+                    text-decoration: underline; <span class="code-comment">/* Text Decoration */</span>
+                    text-transform: uppercase; <span class="code-comment">/* Text Transformation */</span>
+                    <span class="code-keyword">}</span>
+                </code>
+            </pre>
+        </div>
+    </section>
 
-                /* Font Weight - Bold */
-                .bold {
-                  font-weight: bold;
-                }
-            </code>
-        </pre>
-    </div>
-    <hr>
+    <br>
 
-    <h2>links</h2>
-    <hr>
-    <h3>Summary</h3>
-    <ul>
-        Link: Concentrate on the section Styling Links only. It nicely summarizes the pseudo-selectors for links.
+    <section id="font">
+        <h2>Font</h2>
+        <hr>
+        <h3>Summary</h3>
+        <ul>
+            <li> <strong>Fonts:</strong> Concentrate on
+            <li> <strong>Difference</strong> Between <strong>Serif</strong> and <strong>Sans-serif</strong> Fonts
+            <li> <strong>Font Family:</strong> Define the typeface for text using the `font-family` property.
+            <li> <strong>Font Style:</strong> Set the style of the font, such as italic or oblique, with the `font-style` property.
+            <li> <strong>Font Size:</strong> Adjust the size of the font using the `font-size` property.
+            <li> <strong>Set Font Size With Pixels:</strong> Specify the font size using pixels (e.g., `16px`).
+            <li> <strong>Set Font Size With Em:</strong> Specify the font size using relative units like `em`.
+            <li> <strong>Font Weight:</strong> Control the thickness of the font characters using the `font-weight` property.
+        </ul>
+        <div class="code-box">
+            <pre>
+                <code>
+                    <span class="code-comment">/* Serif Font Family */</span>
+                    <span class="code-keyword">.serif {</span>
+                      font-family: "Georgia", "Times New Roman", serif;
+                    <span class="code-keyword">}</span>
 
-        <li> :link - This pseudo-selector is used to target unvisited links (links that the user has not clicked).
-        <li> :visited - Targets visited links (links that the user has clicked).
-        <li> :hover - Styles the link when the mouse cursor hovers over it.
-        <li> :active - Applies styles to the link when it is being activated (e.g., clicked).
-        <li> :focus - Styles the link when it gains focus, such as when navigating with the keyboard.
-    </ul>
+                    <span class="code-comment">/* Sans-serif Font Family */</span>
+                    <span class="code-keyword">.sans-serif {</span>
+                      font-family: "Arial", "Helvetica", sans-serif;
+                    <span class="code-keyword">}</span>
 
-    <div class = "code-box">
-        <pre>
-            <code>
-                /* CSS for styling links */
-                  a:link {
-                    color: blue; /* Unvisited link color */
-                    text-decoration: none; /* Remove underline */
-                  }
+                    <span class="code-comment">/* Italic Font Style */</span>
+                    <span class="code-keyword">.italic {</span>
+                      font-style: italic;
+                    <span class="code-keyword">}</span>
 
-                  a:visited {
-                    color: purple; /* Visited link color */
-                  }
+                    <span class="code-comment">/* Font Size in Pixels */</span>
+                    <span class="code-keyword">.font-size-pixels {</span>
+                      font-size: 16px;
+                    <span class="code-keyword">}</span>
 
-                  a:hover {
-                    color: red; /* Hover color */
-                  }
+                    <span class="code-comment">/* Font Size in Em */</span>
+                    <span class="code-keyword">.font-size-em {</span>
+                      font-size: 1.2em;
+                    <span class="code-keyword">}</span>
 
-                  a:active {
-                    color: green; /* Active (clicked) link color */
-                  }
+                    <span class="code-comment">/* Font Weight - Bold */</span>
+                    <span class="code-keyword">.bold {</span>
+                      font-weight: bold;
+                    <span class="code-keyword">}</span>
+                </code>
+            </pre>
+        </div>
+    </section>
 
-                  a:focus {
-                    outline: 2px solid orange; /* Add focus outline */
-                  }
-            </code>
-        </pre>
-    </div>
-    <hr>
+    <br>
 
-    <h2>Combinators</h2>
-    <hr>
-    <h3>Summary</h3>
-    <ul>
-        <li>
-            **Descendant Combinator (Whitespace):**
-            - Symbol: (space)
-            - Description: Selects elements that are descendants of another element. It matches all instances where the right-hand element is contained within the left-hand element, no matter how deep.
-        </li>
-        <li>
-            **Child Combinator (>):**
-            - Symbol: `>`
-            - Description: Selects elements that are a direct child of another element. It matches elements that are immediately nested within the parent element.
-        </li>
-        <li>
-            **Adjacent Sibling Combinator (+):**
-            - Symbol: `+`
-            - Description: Selects an element that is immediately preceded by another element. It matches the element that shares the same parent and appears directly after the specified element.
-        </li>
-        <li>
-            **General Sibling Combinator (~):**
-            - Symbol: `~`
-            - Description: Selects elements that are siblings of another element and share the same parent. It matches elements that appear anywhere after the specified element.
-        </li>
-    </ul>
-    <div class = "code-box">
-        <pre>
-            <code>
-                /* Examples */
-                  div p {
-                    /* Selects all &lt;p&gt; elements within a &lt;div&gt; */
-                  }
+    <section id="links">
+        <h2>Links</h2>
+        <hr>
+        <h3>Summary</h3>
+        <ul>
+            <li> <strong>:link</strong> - This pseudo-selector is used to target unvisited links (links that the user has not clicked).
+            <li> <strong>:visited</strong> - Targets visited links (links that the user has clicked).
+            <li> <strong>:hover</strong> - Styles the link when the mouse cursor hovers over it.
+            <li> <strong>:active</strong> - Applies styles to the link when it is being activated (e.g., clicked).
+            <li> <strong>:focus</strong> - Styles the link when it gains focus, such as when navigating with the keyboard.
+        </ul>
+        <div class="code-box">
+            <pre>
+                <code>
+                  <span class="code-comment">/* CSS for styling links */</span>
+                  <span class="code-keyword">a:link {</span>
+                    color: blue; <span class="code-comment">/* Unvisited link color */</span>
+                    text-decoration: none; <span class="code-comment">/* Remove underline */</span>
+                  <span class="code-keyword">}</span>
 
-                  ul > li {
-                    /* Selects all &lt;li&gt; elements that are direct children of a &lt;ul&gt; */
-                  }
+                  <span class="code-keyword">a:visited {</span>
+                    color: purple; <span class="code-comment">/* Visited link color */</span>
+                  <span class="code-keyword">}</span>
 
-                  h2 + p {
-                    /* Selects a &lt;p&gt; element that directly follows an &lt;h2&gt; */
-                  }
+                  <span class="code-keyword">a:hover {</span>
+                    color: red; <span class="code-comment">/* Hover color */</span>
+                  <span class="code-keyword">}</span>
 
-                  h2 ~ p {
-                    /* Selects all &lt;p&gt; elements that are siblings of an &lt;h2&gt; */
-                  }
-            </code>
-        </pre>
-    </div>
-    <hr>
+                  <span class="code-keyword">a:active {</span>
+                    color: green; <span class="code-comment">/* Active (clicked) link color */</span>
+                  <span class="code-keyword">}</span>
 
-    <h2>Pseudo Classes</h2>
-    <hr>
-    <h3>Summary</h3>
-    <ul>
-        <li>Syntax: Pseudo-classes in CSS are used to define special states of elements. They are preceded by a colon (":") and allow for the styling of elements based on their relationships and interaction states.
-        <li>Anchor Pseudo-classes: Pseudo-classes related to anchor (&lt;a&gt;) elements are commonly used to style links. These include :link, which selects unvisited links, and :visited, which selects visited links. Additionally, the :hover pseudo-class is used to style links when they are hovered over by the cursor.
-        <li>CSS - The :first-child Pseudo-class: The :first-child pseudo-class selects the first child element within its parent. It is useful for styling the first occurrence of an element within a container.
-        Pseudo-classes provide a powerful way to apply styles to elements based on their relationships and user interaction, allowing for dynamic and targeted styling of web content.
-    </ul>
-    <hr>
+                  <span class="code-keyword">a:focus {</span>
+                    outline: 2px solid orange; <span class="code-comment">/* Add focus outline */</span>
+                  <span class="code-keyword">}</span>
+                </code>
+            </pre>
+        </div>
+    </section>
 
-    <h2>Parent and Child</h2>
-    <hr>
-    <h3>Summary</h3>
-    <p>
-        Parent Element: <br>
-        A parent element is an HTML element that contains one or more child elements. In the HTML document's structure, parent elements enclose or "contain" child elements. For example, a &lt;div&gt; element containing several &lt;p&gt; elements makes the &lt;div&gt; the parent element of those &lt;p&gt; elements.<br>
-        Child Element: <br>
-        A child element is an HTML element that is contained within a parent element. Child elements are nested within their parent elements. For example, within a &lt;ul&gt; (unordered list) element, each &lt;li&gt; (list item) is a child element of the &lt;ul&gt;.
-    </p>
+    <br>
+
+    <section id="combinators">
+        <h2>Combinators</h2>
+        <hr>
+        <h3>Summary</h3>
+        <ul>
+            <li>
+                <strong>**Descendant Combinator (Whitespace):**</strong>
+                - Symbol: (space)
+                - Description: Selects elements that are descendants of another element. It matches all instances where the right-hand element is contained within the left-hand element, no matter how deep.
+            </li>
+            <li>
+                <strong>**Child Combinator (>):**</strong>
+                - Symbol: `>`
+                - Description: Selects elements that are a direct child of another element. It matches elements that are immediately nested within the parent element.
+            </li>
+            <li>
+                <strong>**Adjacent Sibling Combinator (+):**</strong>
+                - Symbol: `+`
+                - Description: Selects an element that is immediately preceded by another element. It matches the element that shares the same parent and appears directly after the specified element.
+            </li>
+            <li>
+                <strong>**General Sibling Combinator (~):**</strong>
+                - Symbol: `~`
+                - Description: Selects elements that are siblings of another element and share the same parent. It matches elements that appear anywhere after the specified element.
+            </li>
+        </ul>
+        <div class="code-box">
+            <pre>
+                <code>
+                  <span class="code-comment">/* Examples */</span>
+                  <span class="code-keyword">div p {</span>
+                    <span class="code-comment">/* Selects all &lt;p&gt; elements within a &lt;div&gt; */</span>
+                  <span class="code-keyword">}</span>
+
+                  <span class="code-keyword">ul > li {</span>
+                    <span class="code-comment">/* Selects all &lt;li&gt; elements that are direct children of a &lt;ul&gt; */</span>
+                  <span class="code-keyword">}</span>
+
+                  <span class="code-keyword">h2 + p {</span>
+                    <span class="code-comment">/* Selects a &lt;p&gt; element that directly follows an &lt;h2&gt; */</span>
+                  <span class="code-keyword">}</span>
+
+                  <span class="code-keyword">h2 ~ p {</span>
+                    <span class="code-comment">/* Selects all &lt;p&gt; elements that are siblings of an &lt;h2&gt; */</span>
+                  <span class="code-keyword">}</span>
+                </code>
+            </pre>
+        </div>
+    </section>
+
+    <br>
+
+    <section id="pseudo-classes">
+        <h2>Pseudo Classes</h2>
+        <hr>
+        <h3>Summary</h3>
+        <ul>
+            <li><strong>Syntax:</strong> Pseudo-classes in CSS are used to define special states of elements. They are preceded by a colon (":") and allow for the styling of elements based on their relationships and interaction states.
+            <li><strong>Anchor Pseudo-classes:</strong> Pseudo-classes related to anchor (&lt;a&gt;) elements are commonly used to style links. These include :link, which selects unvisited links, and :visited, which selects visited links. Additionally, the :hover pseudo-class is used to style links when they are hovered over by the cursor.
+            <li><strong>CSS - The :first-child Pseudo-class:</strong> The :first-child pseudo-class selects the first child element within its parent. It is useful for styling the first occurrence of an element within a container.
+                Pseudo-classes provide a powerful way to apply styles to elements based on their relationships and user interaction, allowing for dynamic and targeted styling of web content.
+        </ul>
+    </section>
+
+    <br>
+
+    <section id="parent-child">
+        <h2>Parent and Child</h2>
+        <hr>
+        <h3>Summary</h3>
+        <p>
+            <strong>Parent Element:</strong> <br>
+            A parent element is an HTML element that contains one or more child elements. In the HTML document's structure, parent elements enclose or "contain" child elements. For example, a &lt;div&gt; element containing several &lt;p&gt; elements makes the &lt;div&gt; the parent element of those &lt;p&gt; elements.<br>
+            <strong>Child Element:</strong> <br>
+            A child element is an HTML element that is contained within a parent element. Child elements are nested within their parent elements. For example, within a &lt;ul&gt; (unordered list) element, each &lt;li&gt; (list item) is a child element of the &lt;ul&gt;.
+        </p>
+    </section>
+
+    <br>
+
+    <section id="lists">
+        <h2>Lists</h2>
+        <hr>
+        <h3>Summary</h3>
+        list-style	Sets all the properties for a list in one declaration
+        list-style-image	Specifies an image as the list-item marker
+        list-style-position	Specifies the position of the list-item markers (bullet points)
+        list-style-type	Specifies the type of list-item marker
+            <ol>
+                <li><strong>list-style</strong> Sets all the properties for a list in one declaration</li>
+                <li><strong>list-style-image</strong> Specifies an image as the list-item marker</li>
+                <li><strong>list-style-position</strong> Specifies the position of the list-item markers (bullet points)</li>
+                <li><strong>list-style-type</strong> Specifies the type of list-item marker</li>
+            </ol>
+        <div class="code-box">
+            <pre>
+                <code>
+                  <span class="code-keyword">ul.a {</span>
+                    list-style-type: circle;
+                  <span class="code-keyword">}</span>
+
+                  <span class="code-keyword">ul.b {</span>
+                    list-style-type: square;
+                  <span class="code-keyword">}</span>
+
+                  <span class="code-keyword">ol.c {</span>
+                    list-style-type: upper-roman;
+                  <span class="code-keyword">}</span>
+
+                  <span class="code-keyword">ol.d {</span>
+                    list-style-type: lower-alpha;
+                  <span class="code-keyword">}</span>
+
+                  <span class="code-comment">/* The list-style property is a shorthand property. It is used to set all the list properties in one declaration: */</span>
+                  <span class="code-keyword">ul {</span>
+                    list-style: square inside url("sqpurple.gif");
+                  <span class="code-keyword">}</span>
+                </code>
+            </pre>
+        </div>
+    </section>
+
+    <br>
+
+    <section id="tables">
+        <h2>Tables</h2>
+        <hr>
+        <h3>Summary</h3>
+        <ol>
+            <li><strong>Black dotted border</strong> of 1 px width (border: 1px solid black)</li>
+            <li><strong>Solid border</strong> of 1 px width having a red color and rounded corners with a radius of 5 px (border: 1px solid black; border-radius: 5px)</li>
+            <li><strong>the borders of table cells so that they appear as one line</strong> (border-collapse: collapse)</li>
+
+            <li><strong>border</strong> Sets all the border properties in one declaration</li>
+            <li><strong>border-collapse</strong> Specifies whether or not table borders should be collapsed</li>
+            <li><strong>border-spacing</strong> Specifies the distance between the borders of adjacent cells</li>
+            <li><strong>caption-side</strong> Specifies the placement of a table caption</li>
+            <li><strong>empty-cells</strong> Specifies whether or not to display borders and background on empty cells in a table</li>
+            <li><strong>table-layout</strong> Sets the layout algorithm to be used for a table</li>
+        </ol>
+        <div class="code-box">
+            <pre>
+                <code>
+                  <span class="code-keyword">table {</span>
+                    width: 100%;
+                  <span class="code-keyword">}</span>
+
+                  <span class="code-keyword">th {</span>
+                    height: 70px;
+                  <span class="code-keyword">}</span>
+
+                  <span class="code-keyword">th {</span>
+                    text-align: left;
+                  <span class="code-keyword">}</span>
+
+                  <span class="code-comment">/* sets the vertical alignment (like top, bottom, or middle) */</span>
+                  <span class="code-keyword">td {</span>
+                    height: 50px;
+                    vertical-align: bottom;
+                  <span class="code-keyword">}</span>
+
+                  <span class="code-comment">/* color on hover */</span>
+                  <span class="code-keyword">tr:hover {background-color: coral;}</span>
+
+                  <span class="code-comment">/* every even row gets color */</span>
+                  <span class="code-keyword">tr:nth-child(even) {background-color: #f2f2f2;}</span>
+                </code>
+            </pre>
+        </div>
+    </section>
+</div>
 </body>
 </html>

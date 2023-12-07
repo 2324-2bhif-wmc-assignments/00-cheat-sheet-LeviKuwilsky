@@ -2,148 +2,207 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <title>Overview of HTML</title>
-
     <link type="text/css" rel="stylesheet" href="./styles.css" />
 </head>
-<body>
+
+<body class="side-thing">
+<div class="sidebar-main">
+    <ul class="menu">
+        <li><div class="main-title">Cheat Sheet</div></li>
+        <li><a href="General.html">General</a></li>
+        <li><a href="OverviewHTML.html">Overview of HTML</a></li>
+        <li><a href="OverviewCSS.html">Overview of CSS</a></li>
+        <!--li><a href="HTMLAndCssBasics.html">The Basics/a/li-->
+        <li><a href="CheatSheet.html">Home</a></li>
+    </ul>
+</div>
+
+<div class="sidebar">
     <h1 class="main-title">Overview of HTML</h1>
-
     <hr>
+    <ul class="menu">
+        <li><a href="#basics">Basics</a></li>
+        <li><a href="#html-elements">HTML elements</a></li>
+        <li><a href="#attributes">Attributes</a></li>
+        <li><a href="#headings">Headings</a></li>
+        <li><a href="#paragraphs">Paragraphs</a></li>
+        <li><a href="#comments">Comments</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#head">Head</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#tables">Tables</a></li>
+    </ul>
+    <hr>
+</div>
 
+<div class="content">
+    <section id="basics">
+    <br>
+    <br>
     <h2>Basics</h2>
-
     <hr>
-    <div class = "code-box">
-        <pre>
-            <code>
-                &lt;!DOCTYPE html&gt;
-                &lt;html lang="en"&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                    &lt;title&gt;Meine HTML-Seite&lt;/title&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                    &lt;h1&gt;Willkommen auf meiner Webseite&lt;/h1&gt;
-                    &lt;p&gt;Dies ist ein einfacher HTML-Textabschnitt.&lt;/p&gt;
-                    &lt;ul&gt;
-                        &lt;li&gt;Erster Eintrag&lt;/li&gt;
-                        &lt;li&gt;Zweiter Eintrag&lt;/li&gt;
-                        &lt;li&gt;Dritter Eintrag&lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;
-            </code>
-        </pre>
+    <div class="code-box">
+            <pre>
+                <code>
+                    <span class="code-keyword">&lt;!DOCTYPE</span> html<span class="code-keyword">&gt;</span>
+                    <span class="code-keyword">&lt;html</span> lang="en"<span class="code-keyword">&gt;</span>
+                    <span class="code-keyword">&lt;head&gt;</span>
+                        <span class="code-keyword">&lt;meta</span> charset="UTF-8"<span class="code-keyword">&gt;</span>
+                        <span class="code-keyword">&lt;title&gt;</span>Meine HTML-Seite<span class="code-keyword">&lt;/title&gt;</span>
+                        <span class="code-keyword">&lt;link</span> type="text/css" rel="stylesheet" href="styles.css" <span class="code-keyword">/&gt;</span>
+                    <span class="code-keyword">&lt;/head&gt;</span>
+                    <span class="code-keyword">&lt;body&gt;</span>
+                        <span class="code-keyword">&lt;h1&gt;</span>Willkommen auf meiner Webseite<span class="code-keyword">&lt;/h1&gt;</span>
+                        <span class="code-keyword">&lt;p&gt;</span>Dies ist ein einfacher HTML-Textabschnitt.<span class="code-keyword">&lt;/p&gt;</span>
+                        <span class="code-keyword">&lt;ul&gt;</span>
+                            <span class="code-keyword">&lt;li&gt;</span>Erster Eintrag<span class="code-keyword">&lt;/li&gt;</span>
+                            <span class="code-keyword">&lt;li&gt;</span>Zweiter Eintrag<span class="code-keyword">&lt;/li&gt;</span>
+                            <span class="code-keyword">&lt;li&gt;</span>Dritter Eintrag<span class="code-keyword">&lt;/li&gt;</span>
+                        <span class="code-keyword">&lt;/ul&gt;</span>
+                    <span class="code-keyword">&lt;/body&gt;</span>
+                    <span class="code-keyword">&lt;/html&gt;</span>
+                </code>
+            </pre>
     </div>
-    <hr>
+    </section>
 
+    <br>
+
+    <section id="html-elements">
     <h2>HTML elements</h2>
     <hr>
     <h3>Tags</h3>
     <ol>
-        <li>&lt;html&gt; - Defines the root of an HTML document</li>
-        <li>&lt;body&gt; - Defines the document's body</li>
-        <li>&lt;h1&gt; - to &lt;h6&gt; Defines HTML headings</li>
-        <li>&lt;br&gt; - defines a line break</li>
+        <li><span class="code-keyword">&lt;html&gt;</span> - Defines the root of an HTML document</li>
+        <li><span class="code-keyword">&lt;body&gt;</span> - Defines the document's body</li>
+        <li><span class="code-keyword">&lt;h1&gt;</span> - to &lt;h6&gt; Defines HTML headings</li>
+        <li><span class="code-keyword">&lt;br&gt;</span> - defines a line break</li>
     </ol>
-    <hr>
+    <div class="code-box">
+            <pre>
+                <code>
+                    <span class="code-keyword">&lt;a&gt;</span> href="https://www.example.com"<span class="code-keyword">&gt;</span>Visit Example Website<span class="code-keyword">&lt;/a&gt;</span>
+                    <span class="code-keyword">&lt;img</span> src="image.jpg" alt="A sample image"<span class="code-keyword">&gt;</span>
+                    <span class="code-keyword">&lt;img</span> src="image.jpg" alt="A sample image" width="200" height="150"<span class="code-keyword">&gt;</span>
+                    <span class="code-keyword">&lt;img</span> src="image.jpg" alt="A beautiful sunset at the beach"<span class="code-keyword">&gt;</span>
+                    <span class="code-keyword">&lt;p</span> style="color: red; font-size: 18px;"<span class="code-keyword">&gt;</span>This is a red and large text.<span class="code-keyword">&lt;/p&gt;</span>
+                    <span class="code-keyword">&lt;html</span> lang="en"<span class="code-keyword">&gt;</span>
+                        <span class="code-comment">&lt;!-- Your webpage content here --&gt;</span>
+                    <span class="code-keyword">&lt;/html&gt;</span>
+                    <span class="code-keyword">&lt;a</span> href="https://www.example.com" title="Visit Example Website"<span class="code-keyword">&gt;</span>Link to Example<span class="code-keyword">&lt;/a&gt;</span>
+                </code>
+            </pre>
+    </div>
+    </section>
 
+    <br>
+
+    <section id="attributes">
     <h2>Attributes</h2>
     <hr>
     <h3>Summary</h3>
     <ol>
         <li>All HTML elements can have attributes</li>
-        <li>The href attribute of &lt;a&gt; specifies the URL of the page the link goes to</li>
-        <li>The src attribute of &lt;img&gt; specifies the path to the image to be displayed</li>
-        <li>The width and height attributes of &lt;img&gt; provide size information for images</li>
-        <li>The alt attribute of &lt;img&gt; provides an alternate text for an image</li>
+        <li>The href attribute of <span class="code-keyword">&lt;a&gt;</span> specifies the URL of the page the link goes to</li>
+        <li>The src attribute of <span class="code-keyword">&lt;img&gt;</span> specifies the path to the image to be displayed</li>
+        <li>The width and height attributes of <span class="code-keyword">&lt;img&gt;</span> provide size information for images</li>
+        <li>The alt attribute of <span class="code-keyword">&lt;img&gt;</span> provides an alternate text for an image</li>
         <li>The style attribute is used to add styles to an element, such as color, font, size, and more</li>
-        <li>The lang attribute of the &lt;html&gt; tag declares the language of the Web page</li>
+        <li>The lang attribute of the <span class="code-keyword">&lt;html&gt;</span> tag declares the language of the Web page</li>
         <li>The title attribute defines some extra information about an element</li>
-
-        <div class="code-box">
+    </ol>
+    <div class="code-box">
             <pre>
                 <code>
-                &lt;a href="https://www.example.com"&gt;Visit Example Website&lt;/a&gt;
-                &lt;img src="image.jpg" alt="A sample image"&gt;
-                &lt;img src="image.jpg" alt="A sample image" width="200" height="150"&gt;
-                &lt;img src="image.jpg" alt="A beautiful sunset at the beach"&gt;
-                &lt;p style="color: red; font-size: 18px;"&gt;This is a red and large text.&lt;/p&gt;
-                &lt;html lang="en"&gt;
-                    &lt;!-- Your webpage content here --&gt;
-                &lt;/html&gt;
-                &lt;a href="https://www.example.com" title="Visit Example Website"&gt;Link to Example&lt;/a&gt;
+                    <span class="code-keyword">a</span> href="https://www.example.com"<span class="code-keyword">&gt;</span>Visit Example Website<span class="code-keyword">&lt;/a&gt;</span>
+                    <span class="code-keyword">&lt;img</span> src="image.jpg" alt="A sample image"<span class="code-keyword">&gt;</span>
+                    <span class="code-keyword">&lt;img</span> src="image.jpg" alt="A sample image" width="200" height="150"<span class="code-keyword">&gt;</span>
+                    <span class="code-keyword">&lt;img</span> src="image.jpg" alt="A beautiful sunset at the beach"<span class="code-keyword">&gt;</span>
+                    <span class="code-keyword">&lt;p</span> style="color: red; font-size: 18px;"<span class="code-keyword">&gt;</span>This is a red and large text.<span class="code-keyword">&lt;/p&gt;</span>
+                    <span class="code-keyword">&lt;html</span> lang="en"<span class="code-keyword">&gt;</span>
+                        <span class="code-comment">&lt;!-- Your webpage content here --&gt;</span>
+                    <span class="code-keyword">&lt;/html&gt;</span>
+                    <span class="code-keyword">&lt;a</span> href="https://www.example.com" title="Visit Example Website"<span class="code-keyword">&gt;</span>Link to Example<span class="code-keyword">&lt;/a&gt;</span>
                 </code>
             </pre>
-        </div>
-    </ol>
-    <hr>
+    </div>
+    </section>
 
+    <br>
+
+    <section id="headings">
     <h2>Headings</h2>
     <hr>
     <h3>Tags</h3>
     <ol>
-        <li>&lt;html&gt; - Defines the root of an HTML document</li>
-        <li>&lt;body&gt; - Defines the document's body</li>
-        <li>&lt;h1&gt; to &lt;h6&gt; - Defines HTML headings</li>
+        <li><span class="code-keyword">&lt;html&gt;</span> - Defines the root of an HTML document</li>
+        <li><span class="code-keyword">&lt;body&gt;</span> - Defines the document's body</li>
+        <li><span class="code-keyword">&lt;h1&gt;</span> to <span class="code-keyword"></span>&lt;h6&gt;</span> - Defines HTML headings</li>
     </ol>
-    <hr>
+    </section>
 
+    <br>
+
+    <section id="paragraphs">
     <h2>Paragraphs</h2>
     <hr>
     <h3>Tags</h3>
     <ol>
-        <li>&lt;p&gt; - Defines a paragraph</li>
-        <li>&lt;hr&gt; - Defines a thematic change in the content</li>
-        <li>&lt;br&gt; - Inserts a single line break</li>
-        <li>&lt;pre&gt; - Defines pre-formatted text</li>
+        <li><span class="code-keyword">&lt;p&gt;</span> - Defines a paragraph</li>
+        <li><span class="code-keyword">&lt;hr&gt;</span> - Defines a thematic change in the content</li>
+        <li><span class="code-keyword">&lt;br&gt;</span> - Inserts a single line break</li>
+        <li><span class="code-keyword">&lt;pre&gt;</span> - Defines pre-formatted text</li>
     </ol>
-    <hr>
+    </section>
 
+    <br>
+
+    <section id="comments">
     <h2>Comments</h2>
     <hr>
+    <h3>Tags</h3>
+    <ol>
+        <li><span class="code-comment">&lt;!-- This is a comment --&gt;</span></li>
+    </ol>
+    </section>
 
-    <pre>
-        <code>
-            &lt;p&gt;This &lt;!-- great text --&gt; is a paragraph.&lt;/p&gt;
-        </code>
-    </pre>
+    <br>
 
-    <hr>
-
+    <section id="links">
     <h2>Links</h2>
     <hr>
     <h3>Summary</h3>
     <ol>
-        <li>Use the &lt;a&gt; element to define a link</li>
+        <li>Use the <span class="code-keyword">&lt;a&gt;</span> element to define a link</li>
         <li>Use the href attribute to define the link address</li>
         <li>Use the target attribute to define where to open the linked document</li>
-        <li>Use the &lt;img&gt; element (inside &lt;a&gt;) to use an image as a link</li>
+        <li>Use the <span class="code-keyword">&lt;img&gt;</span> element (inside <span class="code-keyword">&lt;a&gt;</span>) to use an image as a link</li>
         <li>Use the mailto: scheme inside the href attribute to create a link that opens the user's email program</li>
-
-        <div class="code-box">
-        <pre>
-            <code>
-                &lt;a href="https://www.example.com"&gt;Visit Example Website&lt;/a&gt;
-                &lt;a href="https://www.example.com"&gt;Visit Example Website&lt;/a&gt;
-                &lt;a href="https://www.example.com" target="_blank"&gt;Visit Example Website (Opens in a new tab)&lt;/a&gt;
-                &lt;a href="https://www.example.com"&gt;
-                  &lt;img src="image.jpg" alt="An image link to Example Website"&gt;
-                &lt;/a&gt;
-                &lt;a href="mailto:example@example.com"&gt;Send Email to Example&lt;/a&gt;
-            </code>
-        </pre>
-        </div>
     </ol>
+    <div class="code-box">
+            <pre>
+                <code>
+                    <span class="code-keyword">&lt;a</span> href="https://www.example.com"<span class="code-keyword">&gt;</span>Visit Example Website<span class="code-keyword">&lt;/a&gt;</span>
+                    <span class="code-keyword">&lt;a</span> href="https://www.example.com"<span class="code-keyword">&gt;</span>Visit Example Website<span class="code-keyword">&lt;/a&gt;</span>
+                    <span class="code-keyword">&lt;a</span> href="https://www.example.com" target="_blank"<span class="code-keyword">&gt;</span>Visit Example Website (Opens in a new tab)<span class="code-keyword">&lt;/a&gt;</span>
+                    <span class="code-keyword">&lt;a</span> href="https://www.example.com"<span class="code-keyword">&gt;</span>
+                        <span class="code-keyword">&lt;img</span> src="image.jpg" alt="An image link to Example Website"<span class="code-keyword">&gt;</span>
+                    <span class="code-keyword">&lt;/a&gt;</span>
+                    <span class="code-keyword">&lt;a</span> href="mailto:example@example.com"<span class="code-keyword">&gt;</span>Send Email to Example<span class="code-keyword">&lt;/a&gt;</span>
+                </code>
+            </pre>
+    </div>
     <h3>Tags</h3>
     <ol>
         <li>&lt;a&gt; - Defines a hyperlink</li>
     </ol>
-    <hr>
+    </section>
 
+    <br>
+
+    <section id="images">
     <h2>Images</h2>
     <hr>
     <h3>Image types</h3>
@@ -157,50 +216,135 @@
     </ol>
     <h3>Summary</h3>
     <ol>
-        <li>Use the &lt;img&gt; element to define an image</li>
+        <li>Use the <span class="code-keyword">&lt;img&gt;</span> element to define an image</li>
         <li>Use the src attribute to define the URL of the image</li>
         <li>Use the alt attribute to define an alternate text for an image, if it cannot be displayed</li>
         <li>Use the width and height attributes or the CSS width and height properties to define the size of the image</li>
         <li>Use the CSS float property to let the image float to the left or to the right</li>
-
-        <div class="code-box">
-        <pre>
-            <code>
-                &lt;img src="image.jpg" alt="A sample image"&gt;
-                &lt;img src="image.jpg" alt="A sample image"&gt;
-                &lt;img src="image.jpg" alt="A sample image"&gt;
-                &lt;img src="image.jpg" alt="A sample image" width="200" height="150"&gt;
-                &lt;img src="image.jpg" alt="A sample image" style="float: left;"&gt;
-            </code>
-        </pre>
-        </div>
     </ol>
-    <hr>
+    <div class="code-box">
+            <pre>
+                <code>
+                    <span class="code-keyword">&lt;img</span> src="image.jpg" alt="A sample image"<span class="code-keyword">&gt;</span>
+                    <span class="code-keyword">&lt;img</span> src="image.jpg" alt="A sample image"<span class="code-keyword">&gt;</span>
+                    <span class="code-keyword">&lt;img</span> src="image.jpg" alt="A sample image"<span class="code-keyword">&gt;</span>
+                    <span class="code-keyword">&lt;img</span> src="image.jpg" alt="A sample image" width="200" height="150"<span class="code-keyword">&gt;</span>
+                    <span class="code-keyword">&lt;img</span> src="image.jpg" alt="A sample image" style="float: left;"<span class="code-keyword">&gt;</span>
+                </code>
+            </pre>
+    </div>
+    </section>
 
+    <br>
+
+    <section id="head">
     <h2>Head</h2>
     <hr>
     <h3>Summary</h3>
     <ol>
-        <li>The &lt;head&gt; element is a container for metadata (data about data)</li>
-        <li>The &lt;head&gt; element is placed between the &lt;html&gt; tag and the &lt;body&gt; tag</li>
-        <li>The &lt;title&gt; element is required and it defines the title of the document</li>
-        <li>The &lt;style&gt; element is used to define style information for a single document</li>
-        <li>The &lt;link&gt; tag is most often used to link to external style sheets</li>
-        <li>The &lt;meta&gt; element is typically used to specify the character set, page description, keywords, author of the document, and viewport settings</li>
-        <li>The &lt;script&gt; element is used to define client-side JavaScripts</li>
-        <li>The &lt;base&gt; element specifies the base URL and/or target for all relative URLs in a page</li>
+        <li>The <span class="code-keyword">&lt;head&gt;</span> element is a container for metadata (data about data)</li>
+        <li>The <span class="code-keyword">&lt;head&gt;</span> element is placed between the &lt;html&gt; tag and the &lt;body&gt; tag</li>
+        <li>The <span class="code-keyword">&lt;title&gt;</span> element is required and it defines the title of the document</li>
+        <li>The <span class="code-keyword">&lt;style&gt;</span> element is used to define style information for a single document</li>
+        <li>The <span class="code-keyword">&lt;link&gt;</span> tag is most often used to link to external style sheets</li>
+        <li>The <span class="code-keyword">&lt;meta&gt;</span> element is typically used to specify the character set, page description, keywords, author of the document, and viewport settings</li>
+        <li>The <span class="code-keyword">&lt;script&gt;</span> element is used to define client-side JavaScripts</li>
+        <li>The <span class="code-keyword">&lt;base&gt;</span> element specifies the base URL and/or target for all relative URLs in a page</li>
     </ol>
     <h3>Tags</h3>
     <ol>
-        <li>&lt;head&gt; - Defines information about the document</li>
-        <li>&lt;title&gt; - Defines the title of a document</li>
-        <li>&lt;base&gt; - Defines a default address or a default target for all links on a page</li>
-        <li>&lt;link&gt; - Defines the relationship between a document and an external resource</li>
-        <li>&lt;meta&gt; - Defines metadata about an HTML document</li>
-        <li>&lt;script&gt; - Defines a client-side script</li>
-        <li>&lt;style&gt; - Defines style information for a document</li>
+        <li><span class="code-keyword">&lt;head&gt;</span> - Defines information about the document</li>
+        <li><span class="code-keyword">&lt;title&gt;</span> - Defines the title of a document</li>
+        <li><span class="code-keyword">&lt;base&gt;</span> - Defines a default address or a default target for all links on a page</li>
+        <li><span class="code-keyword">&lt;link&gt;</span> - Defines the relationship between a document and an external resource</li>
+        <li><span class="code-keyword">&lt;meta&gt;</span> - Defines metadata about an HTML document</li>
+        <li><span class="code-keyword">&lt;script&gt;</span> - Defines a client-side script</li>
+        <li><span class="code-keyword">&lt;style&gt;</span> - Defines style information for a document</li>
     </ol>
-    <hr>
+    </section>
 
+    <br>
+
+    <section id="lists">
+        <h2>Lists</h2>
+        <hr>
+        <h3>Tags</h3>
+        <p>
+            <ul>
+                <li>an ordered list (<span class="code-keyword">&lt;ol&gt;</span>)</li>
+                <li>an unordered list (<span class="code-keyword">&lt;ul&gt;</span>)</li>
+                <li>a description list (<span class="code-keyword">&lt;dl&gt;</span>)</li>
+                <li>a list item (<span class="code-keyword">&lt;li&gt;</span>)</li>
+                <li>a description term (<span class="code-keyword">&lt;dt&gt;)</span></li>
+                <li>a description data (<span class="code-keyword">&lt;dd&gt;</span>)</li>
+            </ul>
+        </p>
+    </section>
+
+    <section id="tables">
+        <h2>Tables</h2>
+        <hr>
+        <h3>Tags</h3>
+        <ul>
+            <li>a table (<span class="code-keyword">&lt;table&gt;</span>)</li>
+            <li>a table row (<span class="code-keyword">&lt;tr&gt;</span>)</li>
+            <li>a table header (<span class="code-keyword">&lt;thead&gt;</span>)</li>
+            <li>a table header cell (<span class="code-keyword">&lt;th&gt;</span>)</li>
+            <li>a table body (<span class="code-keyword">&lt;tbody&gt;</span>)</li>
+            <li>a table cell (<span class="code-keyword">&lt;td&gt;</span>)</li>
+            <li>a table footer (<span class="code-keyword">&lt;tfood&gt;</span>)
+            <li>a table footer cell (<span class="code-keyword">&lt;td&gt;</span>)</li>
+        </ul>
+        <div class="code-box">
+            <pre>
+                <code>
+                  <span class="code-comment">&lt;!-- Start of the table --></span>
+                  <span class="code-keyword">&lt;table border="1"&gt;</span>
+
+                    <span class="code-comment">&lt;!-- Table header section --></span>
+                    <span class="code-keyword">&lt;thead&gt;</span>
+                      <span class="code-keyword">&lt;tr&gt;</span>
+                    <span class="code-comment">&lt;!-- Table header cell --></span>
+                        <span class="code-keyword">&lt;th&gt;</span>Header 1<span class="code-keyword">&lt;/th&gt;</span>
+                        <span class="code-keyword">&lt;th&gt;</span>Header 2<span class="code-keyword">&lt;/th&gt;</span>
+                      <span class="code-keyword">&lt;/tr&gt;</span>
+                    <span class="code-keyword">&lt;/thead&gt;</span>
+
+                    <span class="code-comment">&lt;!-- Table body section --></span>
+                    <span class="code-keyword">&lt;tbody&gt;</span>
+                      <span class="code-keyword">&lt;tr&gt;</span>
+                    <span class="code-comment">&lt;!-- Table cell --></span>
+                        <span class="code-keyword">&lt;td&gt;</span>Row 1, Cell 1<span class="code-keyword">&lt;/td&gt;</span>
+                        <span class="code-keyword">&lt;td&gt;</span>Row 1, Cell 2<span class="code-keyword">&lt;/td&gt;</span>
+                      <span class="code-keyword">&lt;/tr&gt;</span>
+                      <span class="code-keyword">&lt;tr&gt;</span>
+                        <span class="code-keyword">&lt;td&gt;</span>Row 2, Cell 1<span class="code-keyword">&lt;/td&gt;</span>
+                        <span class="code-keyword">&lt;td&gt;</span>Row 2, Cell 2<span class="code-keyword">&lt;/td&gt;</span>
+                      <span class="code-keyword">&lt;/tr&gt;</span>
+                    <span class="code-keyword">&lt;/tbody&gt;</span>
+
+                    <span class="code-comment">&lt;!-- Table footer section --></span>
+                    <span class="code-keyword">&lt;tfoot&gt;</span>
+                      <span class="code-keyword">&lt;tr&gt;</span>
+                    <span class="code-comment">&lt;!-- Table footer cell --></span>
+                        <span class="code-keyword">&lt;td&gt;</span>Footer 1<span class="code-keyword">&lt;/td&gt;</span>
+                        <span class="code-keyword">&lt;td&gt;</span>Footer 2<span class="code-keyword">&lt;/td&gt;</span>
+                      <span class="code-keyword">&lt;/tr&gt;</span>
+                    <span class="code-keyword">&lt;/tfoot&gt;</span>
+
+                  <span class="code-keyword">&lt;/table&gt;</span>
+                    <span class="code-comment">&lt;!-- End of the table --></span>
+
+                  <span class="code-comment">&lt;!-- Table to make it responsive --&gt;  </span>
+                  <span class="code-keyword">&lt;div style="overflow-x:auto;"&gt;</span>
+                  <span class="code-keyword">&lt;table&gt;</span>
+                    ... table content ...
+                  <span class="code-keyword">&lt;/table&gt;</span>
+                  <span class="code-keyword">&lt;/div&gt;</span>
+                </code>
+            </pre>
+        </div>
+    </section>
+</div>
 </body>
 </html>

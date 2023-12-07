@@ -7,115 +7,161 @@
 
     <link type="text/css" rel="stylesheet" href="./styles.css" />
 </head>
-<body>
-    <h1 class="main-title">General</h1>
-
+<body class="side-thing">
+<div class="sidebar-main">
+    <ul class="menu">
+        <li><div class="main-title">Cheat Sheet</div></li>
+        <li><a href="General.html">General</a></li>
+        <li><a href="OverviewHTML.html">Overview of HTML</a></li>
+        <li><a href="OverviewCSS.html">Overview of CSS</a></li>
+        <!--li><a href="HTMLAndCssBasics.html">The Basics/a/li-->
+        <li><a href="CheatSheet.html">Home</a></li>
+    </ul>
+</div>
+<div class="sidebar">
+    <h1 class="main-title">Overview of General</h1>
     <hr>
-
-    <button onclick="window.location.href = '#word-wide-web-general'">Go to Word Wide Web General</button>
-    <button onclick="window.location.href = '#web-server'">Go to Web Server</button>
-    <button onclick="window.location.href = '#web-client'">Go to Web Client</button>
-    <button onclick="window.location.href = '#hello-world'">Go to Hello World</button>
-
+    <ul class="menu">
+        <li><a href="#world-wide-web-general">World Wide Web General</a></li>
+        <li><a href="#web-server">Web Server</a></li>
+        <li><a href="#web-client">Web Client</a></li>
+        <li><a href="#http">HTTP</a></li>
+    </ul>
     <hr>
+</div>
 
-    <!-- Word Wide Web General -->
-    <h2 id="word-wide-web-general">Word Wide Web General</h2>
-    <hr>
-    <h3>What are the most essential technologies that made the World Wide Web such a success?</h3>
-    <p>
-        The most essential technologies that made the World Wide Web a success include:
+    <div class="content">
+        <section id="world-wide-web-general">
+            <br>
+            <br>
+            <h2>World Wide Web General</h2>
+            <hr>
+            <h3>History and General</h3>
+            <p>
+                <h4>Hypertext and Hyperlinks</h4>
+                <ul>
+                    <li>Inspired by Ted Nelson's hypertext model</li>
+                    <li>Allowed for the <strong>creation of non-linear, interconnected documents</strong></li>
+                    <li>Replaced traditional hierarchical document structures</li>
+                </ul>
+                <h4>HTTP (Hypertext Transfer Protocol)</h4>
+                <ul>
+                    is the fundamental <strong>protocol</strong> used for communication on the World Wide Web. It <strong>defines the rules and conventions</strong> for transmitting data, typically in the form of text, images, videos, links, and other media, <strong>between a web server and a web client, which is usually a web browser</strong>. <br>
+                    <li>Defined by Tim Berners-Lee as the protocol for the web.</li>
+                    <li>Specifies how <strong>web messages</strong> are <strong>formatted and transmitted</strong></li>
+                    <li><strong>Distributes</strong> web content</li>
+                    <li>Facilitates communication between web browsers and servers</li>
+                </ul>
+                <h4>HTML (Hypertext Markup Language)</h4>
+                <ul>
+                    <li>Became the primary document format for the web</li>
+                    <li>Used for <strong>structuring and formatting</strong> web content</li>
+                    <li>Evolved over time, with HTML5 enabling interactive and multimedia-rich web pages</li>
+                </ul>
+            </p>
+            <h3>URLs</h3>
+            <p>
+                <h4>Summary</h4>
+                <ul>
+                    <li>Stands for <strong>Uniform Resource Locator</strong>, aka. adress of the web</li>
+                    <li>They are used to <strong>refference web pages</strong> or <strong>file transfer</strong></li>
 
-        Hypertext Markup Language (HTML): Used to structure and format web content.
-        Uniform Resource Locator (URL): Provides a standardized way to address web resources.
-        Hypertext Transfer Protocol (HTTP/HTTPS): Facilitates the transfer of data between web servers and clients.
-        Web Browsers: Software that interprets and displays web content to users.
-        Search Engines: Tools that help users discover and navigate web resources effectively.
-    </p>
+                </ul>
+                <h4>Components of a URL</h4>
+                <img src="URI_syntax_diagram.svg.png" alt="Image of URL components" width="700" height="125">
+            </p>
+        </section>
 
-    <h3>How are resources (html pages, images, etc) addressed in the web?</h3>
-        <p>
-            Resources on the web, such as HTML pages and images, are addressed using Uniform Resource Locators (URLs). It usually consists of many components, including the protocol (for example: http:// or https://), the domain or host name (e.g., www.example.com), and the path to the specific resource on the server.
-        </p>
+        <br>
 
-    <h3>What are the general components of a url?</h3>
-        <p>
-            The general components of a URL are the protocol, domain (or host), port (optional), path, query parameters (optional), and fragment identifier (optional). For example, in the URL "https://www.example.com:8080/path/page?param=value#section," "https" is the protocol, "www.example.com" is the domain, "8080" is the port, "/path/page" is the path, "param=value" is a query parameter, and "section" is a fragment identifier.
-        </p>
+        <section id="web-server">
+            <h2>Web Server</h2>
+            <hr>
+            <h3>Summary</h3>
+            <p>
+                It is <strong>computer software and underlying hardware</strong>.
+                <ul>
+                    <li>Accepts HTTP Requests</li>
+                    <li>Processes Requests</li>
+                    <li>Retrieves Resources</li>
+                    <li>Generates Responses</li>
+                    <li>Sends Responses</li>
+                    <li>Handles Errors</li>
+                    <li>Enables Storage</li>
+                    <li>Manages Connections</li>
+                    <li>Handles Security</li>
+                    <li>Supports Application Protocols</li>
+                    <li>Scalability</li>
+                </ul>
 
-    <hr>
+                <h4>Types of Web Servers:</h4>
+                The <strong>hardware</strong> used for a web server <strong>varies</strong> depending on the request volume.<br>
+                This can range from <strong>small embedded systems</strong>, such as routers, to <strong>large setups with high-speed computers</strong>.
 
-    <!-- Web Server -->
-    <h2 id="web-server">Web Server</h2>
-    <hr>
-    <h3>What is a web server?</h3>
-        <p>
-            A web server is a software application or hardware device wich stores, processes, and serves web content to clients over the internet. It waits for incoming requests from web clients (like web browsers) and responds by delivering webpages or files or data.
-        </p>
+                <h4>Static and Dynamic Content:</h4>
+                Resources sent by a web server <strong>can be pre-existing files</strong> (<strong>static content</strong>).<br>
+                Static content can be served <strong>faster and cached for repeated requests</strong>.<br>
+                Web servers can also <strong>generate content at the time of the request</strong> (<strong>dynamic content</strong>), often through interactions with other programs.<br>
+                Dynamic content <strong>supports a wider range of applications</strong>.
 
-    <h3>What does a web server do?</h3>
-        <p>
-            A web server primarily serves web content by processing incoming HTTP or HTTPS requests from web clients. It retrieves requested resources, processes server-side scripts if needed, and sends the appropriate response (for example HTML pages, images, or other files) back to the client.
-        </p>
+                <h4>Expanded Use of Web Servers:</h4>
+                Technologies like REST, SOAP, and WebDAV have extended the application of web servers beyond serving web pages.<br>
+                They are now used for general computer-to-computer communication and support various extensions.
+            </p>
+        </section>
 
-    <h3>How can content be stored on a web server?</h3>
-        <p>
-            Content can be stored on a web server in various ways, typically as files in directories on the server's file system. Additionally some web servers use databases to store dynamic content, while others may generate content on-the-fly using server-side scripting languages like PHP, Python, or Node.js.
-        </p>
+        <br>
 
-    <h3>How is content in webpages described?</h3>
-        <p>
-            Content in webpages is described using HTML (Hypertext Markup Language), wich defines the structure and layout of web documents. HTML tags and elements are used to format some text, insert images, create hyperlinks, and define the overall structure of the page.
-        </p>
+        <section id="web-client">
+            <h2>Web Client</h2>
+            <hr>
+            <h3>Summary</h3>
+            <p>
+                It is an <strong>application for accessing websites and the Internet</strong>. <br>
+                A <strong>web browser is a client</strong>.
+                <ul>
+                    <li>Renders HTML pages</li>
+                    <li>Requests new web content upon user request</li>
+                    <li>Proccesses HTTP responses</li>
+                    <li>Sends HTTP requests</li>
+                    <li>Interacts with web applications</li>
+                    <li>Maintains user session</li>
+                    <li>Resolves URLs</li>
+                    <li>Implements security</li>
+                    <li>Down and uploads files</li>
+                    <li>Supports user prefferences</li>
+                </ul>
+                    
+            </p>
+        </section>
 
-    <hr>
+        <br>
 
-    <!-- Web Client -->
-    <h2 id="web-client">Web Client</h2>
-    <hr>
-    <h3>What is a web client?</h3>
-        <p>
-            A web client is a software application or program that requests and retrieves web content from web servers. Web browsers are a common example of web clients, but other applications like email clients or mobile apps can also act as web clients.
-        </p>
-
-    <h3>What does a web client do?</h3>
-        <p>
-            A web client is responsible for sending HTTP or HTTPS requests to web servers to retrieve webpages, files, or data. It then interprets and displays the received content to the user, making it accessible and interactive.
-        </p>
-
-    <h3>Web Client and Web Browser is the same?</h3>
-        <p>
-            While a web client is a broader term, a web browser is a specific type of web client that is normally used for viewing and interacting with web content in a graphical user interface.
-        </p>
-
-    <hr>
-
-    <!-- Hello World -->
-    <h2 id="hello-world">Hello World</h2>
-    <hr>
-    <h3>What is the html head element?</h3>
-        <p>
-            he HTML >head> element is a container within an HTML document that contains metadata about the webpage, such as the title, character encoding, linked stylesheets, and other information that is not directly displayed on the webpage.
-        </p>
-
-    <h3>What does !DOCTYPE` html mean?</h3>
-        <p>
-            !DOCTYPE html is a document type declaration in HTML that specifies the document type and version being used. In this case it indicates that the document is an HTML5 document which is the latest version of HTML.
-        </p>
-
-    <h3>How to mark up important ext and how is it displayed in the browser?</h3>
-        <p>
-            To mark up important text, you can use the >strong> element. Text enclosed within >strong> tags is typically displayed as bold text by web browsers.
-        </p>
-
-    <h3>What are the two top most elements within the html element?</h3>
-        <p>
-            The two topmost elements within the HTML document are >html> and >head>. The >html> element encloses the entire HTML document, while the >head> element contains metadata and links to external resources.
-        </p>
-
-    <h3>How to emphasize a text and how is it displayed in the browser?</h3>
-        <p>
-            To emphasize text in HTML, you can use the >em> element for semantic emphasis. The text enclosed within >em> tags is typically displayed in italics by web browsers.
-        </p>
+        <section id="http">
+            <h2>HTTP</h2>
+            <hr>
+            <h3>Summary</h3>
+            <p>
+                HTTP, or Hypertext Transfer Protocol, is a fundamental protocol used for communication on the World Wide Web. Here are some of the most important things to know about HTTP: <br>
+                <ul>
+                    <li><strong>Protocol for Web Communication:</strong> HTTP is a protocol used for transferring data and documents over the internet. It is the foundation for data communication on the World Wide Web.</li>
+                    <li><strong>Stateless:</strong> HTTP is a stateless protocol, meaning each request from a client to a server is treated as an independent transaction. The server does not retain information about previous requests, making it simple and lightweight.</li>
+                    <li><strong>Request-Response Model:</strong> It operates on a request-response model. A client, typically a web browser, sends an HTTP request to a server, and the server responds with the requested data. This data can be in the form of HTML web pages, images, text, or other media.</li>
+                    <li><strong>Text-Based:</strong> HTTP messages are text-based, making them human-readable. This facilitates debugging and allows for easier development and inspection of requests and responses.</li>
+                    <li><strong>Methods:</strong> HTTP defines several request methods, including GET (retrieve data), POST (submit data to be processed), PUT (update a resource), DELETE (remove a resource), and more. These methods determine the action to be taken on the resource.</li>
+                    <li><strong>Status Codes:</strong> HTTP uses status codes in responses to indicate the result of a request. Common status codes include 200 (OK), 404 (Not Found), and 500 (Internal Server Error).</li>
+                    <li><strong>Uniform Resource Locator (URL):</strong> URLs are used to identify resources on the web. An HTTP request includes the URL of the resource to be accessed.</li>
+                    <li><strong>Headers:</strong> HTTP messages include headers that provide additional information about the request or response. Headers can include details like content type, encoding, authentication credentials, and caching directives.</li>
+                    <li><strong>Versioning:</strong> HTTP has had multiple versions, with HTTP/1.1 being one of the most widely used versions. HTTP/2 and HTTP/3 are newer versions that offer performance improvements like multiplexing and reduced latency.</li>
+                    <li><strong>Security:</strong> HTTPS (Hypertext Transfer Protocol Secure) is a secure version of HTTP that uses encryption to protect the data transmitted between the client and server. It is widely used for secure online transactions, such as e-commerce and online banking.</li>
+                    <li><strong>Cookies:</strong> HTTP supports cookies, which are small pieces of data sent from a website and stored on a user's device. Cookies are used for various purposes, including session management and tracking user preferences.</li>
+                    <li><strong>RESTful Services:</strong> HTTP is often used as the foundation for RESTful web services, which adhere to a set of architectural principles for building scalable and maintainable web applications.</li>
+                    <li><strong>Web APIs:</strong> Many web services and APIs are accessed using HTTP. These APIs allow different software systems to communicate and exchange data over the internet.</li>
+                    <li><strong>Client-Server Architecture:</strong> HTTP follows a client-server model, where clients (typically web browsers) make requests to servers that host resources. This architecture allows for scalability and the separation of concerns between clients and servers.</li>
+                    <li><strong>Caching:</strong> HTTP supports caching mechanisms, which can improve performance by storing and reusing previously retrieved resources, reducing the need for repeated server requests.</li>
+                </ul>                  
+            </p>
+        </section>
+    </div>
 </body>
 </html>

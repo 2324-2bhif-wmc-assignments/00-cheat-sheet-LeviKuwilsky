@@ -1,39 +1,205 @@
-* {
-    color: lightgray;
-    font-family: sans-serif;
-    font-weight: lighter;
-    background-color: #0b1216;
+/* MAIN */
+
+body {
+    font-family: 'Birdseye', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding: 0;
 }
 
-h3 {
-    color: #a2d2ff;
-}
-
-h2 {
-    color: #bde0fe;
+strong {
     font-weight: bold;
+    color: #1C262AFF;
 }
 
-.main-title {
+/* SIDEBAR */
+.sidebar {
+    background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 4rem;
+    height: 100%;
+    width: 18rem;
+    overflow-y: auto;
+    border-left: 1rem solid #9ad2b2;
+    border-right: 1rem solid #9ad2b2;
+    color: #9ad2b2;
+}
+
+.sidebar h1 {
+    font-size: 20px;
     font-weight: bold;
-    font-size: xxx-large;
-    color: white;
-    text-shadow: 7.5px 7.5px 7.5px #ffafcc;
+    color: #9ad2b2;
+    text-transform: uppercase;
 }
 
-.code-box {
-    background-color: #0b1216;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
+.sidebar a {
+    position: relative;
+    display: block;
+    border: 1px solid transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    -webkit-transition: opacity 300ms ease;
+    -moz-transition: opacity 300ms ease;
+    -ms-transition: opacity 300ms ease;
+    transition: opacity 300ms ease;
+    color: #9ad2b2;
+    text-decoration: none;
 }
 
-pre {
-    white-space: pre-wrap;
+/* CONTENT POSITIONING */
+.content {
+    margin-left: 18rem;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #626262;
+    font-weight: 500;
+    font-family: 'Birdseye', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+/*SIDEBAR*/
+.side-thing{
     margin: 0;
 }
 
-code {
-    font-family: "Courier New", Courier, monospace;
-    color: lightgray;
+.sidebar-main {
+    height: 4rem;
+    background: #9ad2b2;
+    color: #ffffff;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+.sidebar-main .main-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-main li a{
+    float: right;
+    display: flex; /* Hinzugefügter Code für Flexbox */
+    flex-direction: row; /* Hinzugefügter Code für Flexbox */
+}
+
+.sidebar-main li div{
+    float: left;
+    display: flex; /* Hinzugefügter Code für Flexbox */
+    flex-direction: row; /* Hinzugefügter Code für Flexbox */
+}
+
+.menu li{
+    color: #dddddd;
+}
+
+.sidebar-main a {
+    position: relative;
+    display: block;
+    padding: 0px 20px;
+    border: 1px solid transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    -webkit-transition: opacity 300ms ease;
+    -moz-transition: opacity 300ms ease;
+    -ms-transition: opacity 300ms ease;
+    transition: opacity 300ms ease;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #E0FBFC;
+    transition: background-color 300ms ease, color 260ms ease, padding 180ms ease;
+}
+
+.menu a:active {
+    border: 1px solid #ffffff;
+}
+
+/*GENERAL*/
+.content {
+    padding: 20px;
+}
+
+strong {
+    color: #51705b;
+}
+
+/*CODEBOX*/
+.code-box {
+    background-color: #1c262a;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    overflow: auto;
+    font-family: 'Courier New', Monaco;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+/* Highlight code comments */
+.code-comment {
+    color: #3ea834;
+    font-weight: bold;
+}
+
+/* Highlight code keywords */
+.code-keyword {
+    color: #F0BB4B;
+    font-weight: bold;
+}
+
+/*BRAIN ANIMATION*/
+.brain-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vh;
+    position: relative;
+}
+
+.brain-image {
+    width: 100%;
+    position: relative;
+    top: 10px;
+    right: -60%;
+}
+
+.cogwheel {
+    transform: translate(-50%, -50%);
+    animation: rotateCogwheel 4s linear infinite;
+    position: relative;
+    top: 10px;
+    right: -45%;
+    filter: drop-shadow(2px 2px 4px #000000);
+}
+
+@keyframes rotateCogwheel {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
