@@ -1,42 +1,29 @@
-/* MAIN */
-
-body {
-    font-family: 'Birdseye', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    padding: 0;
-}
-
-strong {
-    font-weight: bold;
-    color: #1C262AFF;
-}
-
 /* SIDEBAR */
 .sidebar {
-    background-color: #ffffff;
-    padding: 20px;
+    background-color: rgba(55, 58, 60, 0.85);
+    padding: 2rem;
     box-sizing: border-box;
     position: fixed;
-    top: 4rem;
+    top: 4.4rem;
     height: 100%;
     width: 18rem;
     overflow-y: auto;
-    border-left: 1rem solid #9ad2b2;
-    border-right: 1rem solid #9ad2b2;
-    color: #9ad2b2;
+    border-left: 1rem solid #373a3c;
+    border-right: 1rem solid #373a3c;
+    color: #f0eef1;
 }
 
 .sidebar h1 {
     font-size: 20px;
     font-weight: bold;
-    color: #9ad2b2;
+    color: #eeecef;
     text-transform: uppercase;
 }
 
 .sidebar a {
     position: relative;
     display: block;
-    border: 1px solid transparent;
+    border: 0.25rem solid transparent;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 500;
@@ -47,159 +34,41 @@ strong {
     -moz-transition: opacity 300ms ease;
     -ms-transition: opacity 300ms ease;
     transition: opacity 300ms ease;
-    color: #9ad2b2;
+    color: #eceaed;
     text-decoration: none;
 }
 
-/* CONTENT POSITIONING */
-.content {
-    margin-left: 18rem;
-    padding: 20px;
-    box-sizing: border-box;
-    color: #626262;
-    font-weight: 500;
-    font-family: 'Birdseye', sans-serif;
-    font-size: 16px;
-    line-height: 1.75;
-}
-
-/*SIDEBAR*/
-.side-thing{
-    margin: 0;
-}
-
-.sidebar-main {
-    height: 4rem;
-    background: #9ad2b2;
-    color: #ffffff;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    position: fixed;
-}
-
-.sidebar-main .main-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
-    text-transform: uppercase;
-}
-
-
-.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar-main li a{
-    float: right;
-    display: flex; /* Hinzugefügter Code für Flexbox */
-    flex-direction: row; /* Hinzugefügter Code für Flexbox */
-}
-
-.sidebar-main li div{
-    float: left;
-    display: flex; /* Hinzugefügter Code für Flexbox */
-    flex-direction: row; /* Hinzugefügter Code für Flexbox */
-}
-
-.menu li{
-    color: #dddddd;
-}
-
-.sidebar-main a {
-    position: relative;
-    display: block;
-    padding: 0px 20px;
-    border: 1px solid transparent;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 2;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    -webkit-transition: opacity 300ms ease;
-    -moz-transition: opacity 300ms ease;
-    -ms-transition: opacity 300ms ease;
-    transition: opacity 300ms ease;
-    color: #ffffff;
-    text-decoration: none;
-}
-
+/* NAV BAR */
 .menu a:hover {
-    color: #E0FBFC;
+    color: #a4a5a6;
     transition: background-color 300ms ease, color 260ms ease, padding 180ms ease;
 }
 
-.menu a:active {
-    border: 1px solid #ffffff;
+ul.menu  {
+    list-style: none;
+    padding-left: 0;
 }
 
-/*GENERAL*/
-.content {
-    padding: 20px;
+.nav-link  {
+    padding: 0.2rem 0.1rem;
+    border-radius: 0.25rem;
 }
 
-strong {
-    color: #51705b;
-}
-
-/*CODEBOX*/
-.code-box {
-    background-color: #1c262a;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    overflow: auto;
-    font-family: 'Courier New', Monaco;
-    color: #ffffff;
-    font-weight: normal;
-}
-
-/* Highlight code comments */
-.code-comment {
-    color: #3ea834;
-    font-weight: bold;
-}
-
-/* Highlight code keywords */
-.code-keyword {
-    color: #F0BB4B;
-    font-weight: bold;
-}
-
-/*BRAIN ANIMATION*/
-.brain-animation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vh;
-    position: relative;
-}
-
-.brain-image {
+.navbar {
+    position: fixed;
     width: 100%;
-    position: relative;
-    top: 10px;
-    right: -60%;
 }
 
-.cogwheel {
-    transform: translate(-50%, -50%);
-    animation: rotateCogwheel 4s linear infinite;
-    position: relative;
-    top: 10px;
-    right: -45%;
-    filter: drop-shadow(2px 2px 4px #000000);
+/* CODE BOX */
+code {
+    width: 75%;
+    border-radius: 0.5rem;
+    border: #bababa solid 0.5rem;
 }
 
-@keyframes rotateCogwheel {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
+/* CONTENT */
+.content {
+    padding-top: 3rem;
+    padding-left: 20rem;
 }
+
