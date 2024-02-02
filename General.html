@@ -2,22 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <title>General</title>
-
-    <link type="text/css" rel="stylesheet" href="./styles.css" />
+    <link type="text/css" rel="stylesheet" href="Styles/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="Styles/styles.css" />
 </head>
-<body class="side-thing">
-<div class="sidebar-main">
-    <ul class="menu">
-        <li><div class="main-title">Cheat Sheet</div></li>
-        <li><a href="General.html">General</a></li>
-        <li><a href="OverviewHTML.html">Overview of HTML</a></li>
-        <li><a href="OverviewCSS.html">Overview of CSS</a></li>
-        <!--li><a href="HTMLAndCssBasics.html">The Basics/a/li-->
-        <li><a href="CheatSheet.html">Home</a></li>
-    </ul>
-</div>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Cheat sheet</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="CheatSheet.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active border" href="General.html"> General
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="OverviewCSS.html">Css</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="OverviewHTML.html">HTML</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Fun</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="https://chat.openai.com/" target="_blank">🤫</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
 <div class="sidebar">
     <h1 class="main-title">Overview of General</h1>
     <hr>
@@ -37,39 +68,37 @@
             <h2>World Wide Web General</h2>
             <hr>
             <h3>History and General</h3>
-            <p>
-                <h4>Hypertext and Hyperlinks</h4>
-                <ul>
-                    <li>Inspired by Ted Nelson's hypertext model</li>
-                    <li>Allowed for the <strong>creation of non-linear, interconnected documents</strong></li>
-                    <li>Replaced traditional hierarchical document structures</li>
-                </ul>
-                <h4>HTTP (Hypertext Transfer Protocol)</h4>
-                <ul>
-                    is the fundamental <strong>protocol</strong> used for communication on the World Wide Web. It <strong>defines the rules and conventions</strong> for transmitting data, typically in the form of text, images, videos, links, and other media, <strong>between a web server and a web client, which is usually a web browser</strong>. <br>
-                    <li>Defined by Tim Berners-Lee as the protocol for the web.</li>
-                    <li>Specifies how <strong>web messages</strong> are <strong>formatted and transmitted</strong></li>
-                    <li><strong>Distributes</strong> web content</li>
-                    <li>Facilitates communication between web browsers and servers</li>
-                </ul>
-                <h4>HTML (Hypertext Markup Language)</h4>
-                <ul>
-                    <li>Became the primary document format for the web</li>
-                    <li>Used for <strong>structuring and formatting</strong> web content</li>
-                    <li>Evolved over time, with HTML5 enabling interactive and multimedia-rich web pages</li>
-                </ul>
-            </p>
-            <h3>URLs</h3>
-            <p>
-                <h4>Summary</h4>
-                <ul>
-                    <li>Stands for <strong>Uniform Resource Locator</strong>, aka. adress of the web</li>
-                    <li>They are used to <strong>refference web pages</strong> or <strong>file transfer</strong></li>
 
-                </ul>
-                <h4>Components of a URL</h4>
-                <img src="URI_syntax_diagram.svg.png" alt="Image of URL components" width="700" height="125">
-            </p>
+            <h4>Hypertext and Hyperlinks</h4>
+            <ul>
+                <li>Inspired by Ted Nelson's hypertext model</li>
+                <li>Allowed for the <strong>creation of non-linear, interconnected documents</strong></li>
+                <li>Replaced traditional hierarchical document structures</li>
+            </ul>
+            <h4>HTTP (Hypertext Transfer Protocol)</h4>
+            <ul>
+                is the fundamental <strong>protocol</strong> used for communication on the World Wide Web. It <strong>defines the rules and conventions</strong> for transmitting data, typically in the form of text, images, videos, links, and other media, <strong>between a web server and a web client, which is usually a web browser</strong>. <br>
+                <li>Defined by Tim Berners-Lee as the protocol for the web.</li>
+                <li>Specifies how <strong>web messages</strong> are <strong>formatted and transmitted</strong></li>
+                <li><strong>Distributes</strong> web content</li>
+                <li>Facilitates communication between web browsers and servers</li>
+            </ul>
+            <h4>HTML (Hypertext Markup Language)</h4>
+            <ul>
+                <li>Became the primary document format for the web</li>
+                <li>Used for <strong>structuring and formatting</strong> web content</li>
+                <li>Evolved over time, with HTML5 enabling interactive and multimedia-rich web pages</li>
+            </ul>
+
+            <h3>URLs</h3>
+
+            <h4>Summary</h4>
+            <ul>
+                <li>Stands for <strong>Uniform Resource Locator</strong>, aka. adress of the web</li>
+                <li>They are used to <strong>refference web pages</strong> or <strong>file transfer</strong></li>
+            </ul>
+            <h4>Components of a URL</h4>
+            <img class="URI-diagram" src="URI_syntax_diagram.svg.png" alt="Image of URL components" width="750" height="200">
         </section>
 
         <br>
@@ -80,33 +109,37 @@
             <h3>Summary</h3>
             <p>
                 It is <strong>computer software and underlying hardware</strong>.
-                <ul>
-                    <li>Accepts HTTP Requests</li>
-                    <li>Processes Requests</li>
-                    <li>Retrieves Resources</li>
-                    <li>Generates Responses</li>
-                    <li>Sends Responses</li>
-                    <li>Handles Errors</li>
-                    <li>Enables Storage</li>
-                    <li>Manages Connections</li>
-                    <li>Handles Security</li>
-                    <li>Supports Application Protocols</li>
-                    <li>Scalability</li>
-                </ul>
+            </p>
+            <ul>
+                <li>Accepts HTTP Requests</li>
+                <li>Processes Requests</li>
+                <li>Retrieves Resources</li>
+                <li>Generates Responses</li>
+                <li>Sends Responses</li>
+                <li>Handles Errors</li>
+                <li>Enables Storage</li>
+                <li>Manages Connections</li>
+                <li>Handles Security</li>
+                <li>Supports Application Protocols</li>
+                <li>Scalability</li>
+            </ul>
 
-                <h4>Types of Web Servers:</h4>
-                The <strong>hardware</strong> used for a web server <strong>varies</strong> depending on the request volume.<br>
-                This can range from <strong>small embedded systems</strong>, such as routers, to <strong>large setups with high-speed computers</strong>.
-
-                <h4>Static and Dynamic Content:</h4>
-                Resources sent by a web server <strong>can be pre-existing files</strong> (<strong>static content</strong>).<br>
-                Static content can be served <strong>faster and cached for repeated requests</strong>.<br>
-                Web servers can also <strong>generate content at the time of the request</strong> (<strong>dynamic content</strong>), often through interactions with other programs.<br>
-                Dynamic content <strong>supports a wider range of applications</strong>.
-
-                <h4>Expanded Use of Web Servers:</h4>
-                Technologies like REST, SOAP, and WebDAV have extended the application of web servers beyond serving web pages.<br>
-                They are now used for general computer-to-computer communication and support various extensions.
+            <h4>Types of Web Servers:</h4>
+            <p>
+            The <strong>hardware</strong> used for a web server <strong>varies</strong> depending on the request volume.<br>
+            This can range from <strong>small embedded systems</strong>, such as routers, to <strong>large setups with high-speed computers</strong>.
+            </p>
+            <h4>Static and Dynamic Content:</h4>
+            <p>
+            Resources sent by a web server <strong>can be pre-existing files</strong> (<strong>static content</strong>).<br>
+            Static content can be served <strong>faster and cached for repeated requests</strong>.<br>
+            Web servers can also <strong>generate content at the time of the request</strong> (<strong>dynamic content</strong>), often through interactions with other programs.<br>
+            Dynamic content <strong>supports a wider range of applications</strong>.
+            </p>
+            <h4>Expanded Use of Web Servers:</h4>
+            <p>
+            Technologies like REST, SOAP, and WebDAV have extended the application of web servers beyond serving web pages.<br>
+            They are now used for general computer-to-computer communication and support various extensions.
             </p>
         </section>
 
@@ -119,20 +152,19 @@
             <p>
                 It is an <strong>application for accessing websites and the Internet</strong>. <br>
                 A <strong>web browser is a client</strong>.
-                <ul>
-                    <li>Renders HTML pages</li>
-                    <li>Requests new web content upon user request</li>
-                    <li>Proccesses HTTP responses</li>
-                    <li>Sends HTTP requests</li>
-                    <li>Interacts with web applications</li>
-                    <li>Maintains user session</li>
-                    <li>Resolves URLs</li>
-                    <li>Implements security</li>
-                    <li>Down and uploads files</li>
-                    <li>Supports user prefferences</li>
-                </ul>
-                    
             </p>
+            <ul>
+                <li>Renders HTML pages</li>
+                <li>Requests new web content upon user request</li>
+                <li>Proccesses HTTP responses</li>
+                <li>Sends HTTP requests</li>
+                <li>Interacts with web applications</li>
+                <li>Maintains user session</li>
+                <li>Resolves URLs</li>
+                <li>Implements security</li>
+                <li>Down and uploads files</li>
+                <li>Supports user prefferences</li>
+            </ul>
         </section>
 
         <br>
@@ -143,25 +175,28 @@
             <h3>Summary</h3>
             <p>
                 HTTP, or Hypertext Transfer Protocol, is a fundamental protocol used for communication on the World Wide Web. Here are some of the most important things to know about HTTP: <br>
-                <ul>
-                    <li><strong>Protocol for Web Communication:</strong> HTTP is a protocol used for transferring data and documents over the internet. It is the foundation for data communication on the World Wide Web.</li>
-                    <li><strong>Stateless:</strong> HTTP is a stateless protocol, meaning each request from a client to a server is treated as an independent transaction. The server does not retain information about previous requests, making it simple and lightweight.</li>
-                    <li><strong>Request-Response Model:</strong> It operates on a request-response model. A client, typically a web browser, sends an HTTP request to a server, and the server responds with the requested data. This data can be in the form of HTML web pages, images, text, or other media.</li>
-                    <li><strong>Text-Based:</strong> HTTP messages are text-based, making them human-readable. This facilitates debugging and allows for easier development and inspection of requests and responses.</li>
-                    <li><strong>Methods:</strong> HTTP defines several request methods, including GET (retrieve data), POST (submit data to be processed), PUT (update a resource), DELETE (remove a resource), and more. These methods determine the action to be taken on the resource.</li>
-                    <li><strong>Status Codes:</strong> HTTP uses status codes in responses to indicate the result of a request. Common status codes include 200 (OK), 404 (Not Found), and 500 (Internal Server Error).</li>
-                    <li><strong>Uniform Resource Locator (URL):</strong> URLs are used to identify resources on the web. An HTTP request includes the URL of the resource to be accessed.</li>
-                    <li><strong>Headers:</strong> HTTP messages include headers that provide additional information about the request or response. Headers can include details like content type, encoding, authentication credentials, and caching directives.</li>
-                    <li><strong>Versioning:</strong> HTTP has had multiple versions, with HTTP/1.1 being one of the most widely used versions. HTTP/2 and HTTP/3 are newer versions that offer performance improvements like multiplexing and reduced latency.</li>
-                    <li><strong>Security:</strong> HTTPS (Hypertext Transfer Protocol Secure) is a secure version of HTTP that uses encryption to protect the data transmitted between the client and server. It is widely used for secure online transactions, such as e-commerce and online banking.</li>
-                    <li><strong>Cookies:</strong> HTTP supports cookies, which are small pieces of data sent from a website and stored on a user's device. Cookies are used for various purposes, including session management and tracking user preferences.</li>
-                    <li><strong>RESTful Services:</strong> HTTP is often used as the foundation for RESTful web services, which adhere to a set of architectural principles for building scalable and maintainable web applications.</li>
-                    <li><strong>Web APIs:</strong> Many web services and APIs are accessed using HTTP. These APIs allow different software systems to communicate and exchange data over the internet.</li>
-                    <li><strong>Client-Server Architecture:</strong> HTTP follows a client-server model, where clients (typically web browsers) make requests to servers that host resources. This architecture allows for scalability and the separation of concerns between clients and servers.</li>
-                    <li><strong>Caching:</strong> HTTP supports caching mechanisms, which can improve performance by storing and reusing previously retrieved resources, reducing the need for repeated server requests.</li>
-                </ul>                  
             </p>
+            <ul>
+                <li><strong>Protocol for Web Communication:</strong> HTTP is a protocol used for transferring data and documents over the internet. It is the foundation for data communication on the World Wide Web.</li>
+                <li><strong>Stateless:</strong> HTTP is a stateless protocol, meaning each request from a client to a server is treated as an independent transaction. The server does not retain information about previous requests, making it simple and lightweight.</li>
+                <li><strong>Request-Response Model:</strong> It operates on a request-response model. A client, typically a web browser, sends an HTTP request to a server, and the server responds with the requested data. This data can be in the form of HTML web pages, images, text, or other media.</li>
+                <li><strong>Text-Based:</strong> HTTP messages are text-based, making them human-readable. This facilitates debugging and allows for easier development and inspection of requests and responses.</li>
+                <li><strong>Methods:</strong> HTTP defines several request methods, including GET (retrieve data), POST (submit data to be processed), PUT (update a resource), DELETE (remove a resource), and more. These methods determine the action to be taken on the resource.</li>
+                <li><strong>Status Codes:</strong> HTTP uses status codes in responses to indicate the result of a request. Common status codes include 200 (OK), 404 (Not Found), and 500 (Internal Server Error).</li>
+                <li><strong>Uniform Resource Locator (URL):</strong> URLs are used to identify resources on the web. An HTTP request includes the URL of the resource to be accessed.</li>
+                <li><strong>Headers:</strong> HTTP messages include headers that provide additional information about the request or response. Headers can include details like content type, encoding, authentication credentials, and caching directives.</li>
+                <li><strong>Versioning:</strong> HTTP has had multiple versions, with HTTP/1.1 being one of the most widely used versions. HTTP/2 and HTTP/3 are newer versions that offer performance improvements like multiplexing and reduced latency.</li>
+                <li><strong>Security:</strong> HTTPS (Hypertext Transfer Protocol Secure) is a secure version of HTTP that uses encryption to protect the data transmitted between the client and server. It is widely used for secure online transactions, such as e-commerce and online banking.</li>
+                <li><strong>Cookies:</strong> HTTP supports cookies, which are small pieces of data sent from a website and stored on a user's device. Cookies are used for various purposes, including session management and tracking user preferences.</li>
+                <li><strong>RESTful Services:</strong> HTTP is often used as the foundation for RESTful web services, which adhere to a set of architectural principles for building scalable and maintainable web applications.</li>
+                <li><strong>Web APIs:</strong> Many web services and APIs are accessed using HTTP. These APIs allow different software systems to communicate and exchange data over the internet.</li>
+                <li><strong>Client-Server Architecture:</strong> HTTP follows a client-server model, where clients (typically web browsers) make requests to servers that host resources. This architecture allows for scalability and the separation of concerns between clients and servers.</li>
+                <li><strong>Caching:</strong> HTTP supports caching mechanisms, which can improve performance by storing and reusing previously retrieved resources, reducing the need for repeated server requests.</li>
+            </ul>
         </section>
     </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>hljs.highlightAll();</script>
 </body>
 </html>

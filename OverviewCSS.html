@@ -3,20 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Cheat Sheet</title>
-    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <link type="text/css" rel="stylesheet" href="Styles/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="Styles/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
 </head>
 
-<body class="side-thing">
-<div class="sidebar-main">
-    <ul class="menu">
-        <li><div class="main-title">Cheat Sheet</div></li>
-        <li><a href="General.html">General</a></li>
-        <li><a href="OverviewHTML.html">Overview of HTML</a></li>
-        <li><a href="OverviewCSS.html">Overview of CSS</a></li>
-        <!--li><a href="HTMLAndCssBasics.html">The Basics/a/li-->
-        <li><a href="CheatSheet.html">Home</a></li>
-    </ul>
-</div>
+<body>
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Cheat sheet</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="CheatSheet.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="General.html">General</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active border" href="OverviewCSS.html">Css
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="OverviewHTML.html">HTML</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Fun</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="https://chat.openai.com/" target="_blank">🤫</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
 
 <div class="sidebar">
     <h1 class="main-title">Overview of CSS</h1>
@@ -48,8 +80,8 @@
         <h3>Summary</h3>
         <p>
             In CSS, the syntax defines the rules for writing CSS code. It consists of a selector and a declaration block enclosed in curly braces.
-            <img src="img_selector.gif" alt="Image of selector">
         </p>
+        <img src="images/img_selector.gif" alt="Image of selector">
     </section>
 
     <section id="selectors">
@@ -72,13 +104,11 @@
         <h2>Comments</h2>
         <hr>
         <h3>Summary</h3>
-        <div class="code-box">
-            <pre>
-                <code class="language-html">
-                    <span class="code-comment">/* This is a single-line comment. */</span>
-                </code>
-            </pre>
-        </div>
+        <pre>
+        <code class="bg-dark-subtle">
+        <span class="code-comment">/* This is a single-line comment. */</span>
+        </code>
+        </pre>
     </section>
 
     <br>
@@ -113,33 +143,34 @@
             <li>background-position</li>
             <li>background (shorthand property)</li>
         </ul>
-        <div class="code-box">
-            <pre>
-                <code>
-                  &lt;!DOCTYPE html&gt;
-                  <span class="code-keyword">&lt;html&gt;</span>
-                  <span class="code-keyword">&lt;head&gt;</span>
-                    <span class="code-keyword">&lt;style&gt;</span>
-                      <span class="code-comment">/* CSS for background properties */</span>
-                      <span class="code-keyword">.background {</span>
-                        background-color: #ff9900; <span class="code-comment">/* Background Color */</span>
-                        background-image: url('background.jpg'); <span class="code-comment">/* Background Image */</span>
-                        background-repeat: no-repeat; <span class="code-comment">/* Background Image - No Repeat */</span>
-                        background-repeat: repeat-x; <span class="code-comment">/* Background Image - Repeat Horizontally */</span>
-                        background-repeat: repeat-y; <span class="code-comment">/* Background Image - Repeat Vertically */</span>
-                        background-attachment: fixed; <span class="code-comment">/* Background Image - Fixed Position */</span>
-                      <span class="code-keyword">}</span>
-                    <span class="code-keyword">&lt;/style&gt;</span>
-                  <span class="code-keyword">&lt;/head&gt;</span>
-                  <span class="code-keyword">&lt;body&gt;</span>
-                    <span class="code-keyword">&lt;div class="background"&gt;</span>
-                                <span class="code-comment">&lt;!-- Your content here --&gt;</span>
-                    <span class="code-keyword">&lt;/div&gt;</span>
-                  <span class="code-keyword">&lt;/body&gt;</span>
-                  <span class="code-keyword">&lt;/html&gt;</span>
-                </code>
-            </pre>
-        </div>
+        <pre>
+        <code class="bg-dark-subtle">
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Example Code&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;style&gt;
+              /* CSS for background properties */
+              .background {
+                background-color: #ff9900; /* Background Color */
+                background-image: url('background.jpg'); /* Background Image */
+                background-repeat: no-repeat; /* Background Image - No Repeat */
+                background-repeat: repeat-x; /* Background Image - Repeat Horizontally */
+                background-repeat: repeat-y; /* Background Image - Repeat Vertically */
+                background-attachment: fixed; /* Background Image - Fixed Position */
+              }
+            &lt;/style&gt;
+            &lt;div class="background"&gt;
+                &lt;!-- Your content here --&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+        </code>
+        </pre>
     </section>
 
     <br>
@@ -154,19 +185,17 @@
             <li> <strong>Text Decoration:</strong> Add decorative elements to text, such as underlines or overlines, using the `text-decoration` property.
             <li> <strong>Text Transformation:</strong> Change the capitalization of text with the `text-transform` property, allowing you to apply uppercase, lowercase, or capitalize the first letter of each word.
         </ul>
-        <div class="code-box">
-            <pre>
-                <code>
-                    <span class="code-comment">/* CSS for text properties */</span>
-                    <span class="code-keyword">.text-example {</span>
-                    color: blue; <span class="code-comment">/* Text Color */</span>
-                    text-align: center; <span class="code-comment">/* Text Alignment */</span>
-                    text-decoration: underline; <span class="code-comment">/* Text Decoration */</span>
-                    text-transform: uppercase; <span class="code-comment">/* Text Transformation */</span>
-                    <span class="code-keyword">}</span>
-                </code>
-            </pre>
-        </div>
+        <pre>
+        <code class="bg-dark-subtle">
+        /* CSS for text properties */
+        .text-example {
+          color: blue; /* Text Color */
+          text-align: center; /* Text Alignment */
+          text-decoration: underline; /* Text Decoration */
+          text-transform: uppercase; /* Text Transformation */
+        }
+        </code>
+        </pre>
     </section>
 
     <br>
@@ -185,41 +214,39 @@
             <li> <strong>Set Font Size With Em:</strong> Specify the font size using relative units like `em`.
             <li> <strong>Font Weight:</strong> Control the thickness of the font characters using the `font-weight` property.
         </ul>
-        <div class="code-box">
-            <pre>
-                <code>
-                    <span class="code-comment">/* Serif Font Family */</span>
-                    <span class="code-keyword">.serif {</span>
-                      font-family: "Georgia", "Times New Roman", serif;
-                    <span class="code-keyword">}</span>
+        <pre>
+        <code class="bg-dark-subtle">
+        /* Serif Font Family */
+        .serif {
+          font-family: "Georgia", "Times New Roman", serif;
+        }
 
-                    <span class="code-comment">/* Sans-serif Font Family */</span>
-                    <span class="code-keyword">.sans-serif {</span>
-                      font-family: "Arial", "Helvetica", sans-serif;
-                    <span class="code-keyword">}</span>
+        /* Sans-serif Font Family */
+        .sans-serif {
+          font-family: "Arial", "Helvetica", sans-serif;
+        }
 
-                    <span class="code-comment">/* Italic Font Style */</span>
-                    <span class="code-keyword">.italic {</span>
-                      font-style: italic;
-                    <span class="code-keyword">}</span>
+        /* Italic Font Style */
+        .italic {
+          font-style: italic;
+        }
 
-                    <span class="code-comment">/* Font Size in Pixels */</span>
-                    <span class="code-keyword">.font-size-pixels {</span>
-                      font-size: 16px;
-                    <span class="code-keyword">}</span>
+        /* Font Size in Pixels */
+        .font-size-pixels {
+          font-size: 16px;
+        }
 
-                    <span class="code-comment">/* Font Size in Em */</span>
-                    <span class="code-keyword">.font-size-em {</span>
-                      font-size: 1.2em;
-                    <span class="code-keyword">}</span>
+        /* Font Size in Em */
+        .font-size-em {
+          font-size: 1.2em;
+        }
 
-                    <span class="code-comment">/* Font Weight - Bold */</span>
-                    <span class="code-keyword">.bold {</span>
-                      font-weight: bold;
-                    <span class="code-keyword">}</span>
-                </code>
-            </pre>
-        </div>
+        /* Font Weight - Bold */
+        .bold {
+          font-weight: bold;
+        }
+        </code>
+        </pre>
     </section>
 
     <br>
@@ -235,33 +262,32 @@
             <li> <strong>:active</strong> - Applies styles to the link when it is being activated (e.g., clicked).
             <li> <strong>:focus</strong> - Styles the link when it gains focus, such as when navigating with the keyboard.
         </ul>
-        <div class="code-box">
-            <pre>
-                <code>
-                  <span class="code-comment">/* CSS for styling links */</span>
-                  <span class="code-keyword">a:link {</span>
-                    color: blue; <span class="code-comment">/* Unvisited link color */</span>
-                    text-decoration: none; <span class="code-comment">/* Remove underline */</span>
-                  <span class="code-keyword">}</span>
 
-                  <span class="code-keyword">a:visited {</span>
-                    color: purple; <span class="code-comment">/* Visited link color */</span>
-                  <span class="code-keyword">}</span>
+        <pre>
+        <code class="bg-dark-subtle">
+        /* CSS for styling links */
+        a:link {
+          color: blue; /* Unvisited link color */
+          text-decoration: none; /* Remove underline */
+        }
 
-                  <span class="code-keyword">a:hover {</span>
-                    color: red; <span class="code-comment">/* Hover color */</span>
-                  <span class="code-keyword">}</span>
+        a:visited {
+          color: purple; /* Visited link color */
+        }
 
-                  <span class="code-keyword">a:active {</span>
-                    color: green; <span class="code-comment">/* Active (clicked) link color */</span>
-                  <span class="code-keyword">}</span>
+        a:hover {
+          color: red; /* Hover color */
+        }
 
-                  <span class="code-keyword">a:focus {</span>
-                    outline: 2px solid orange; <span class="code-comment">/* Add focus outline */</span>
-                  <span class="code-keyword">}</span>
-                </code>
-            </pre>
-        </div>
+        a:active {
+          color: green; /* Active (clicked) link color */
+        }
+
+        a:focus {
+          outline: 2px solid orange; /* Add focus outline */
+        }
+        </code>
+        </pre>
     </section>
 
     <br>
@@ -292,28 +318,26 @@
                 - Description: Selects elements that are siblings of another element and share the same parent. It matches elements that appear anywhere after the specified element.
             </li>
         </ul>
-        <div class="code-box">
-            <pre>
-                <code>
-                  <span class="code-comment">/* Examples */</span>
-                  <span class="code-keyword">div p {</span>
-                    <span class="code-comment">/* Selects all &lt;p&gt; elements within a &lt;div&gt; */</span>
-                  <span class="code-keyword">}</span>
+        <pre>
+        <code class="bg-dark-subtle">
+        /* Examples */
+        div p {
+            /* Selects all &lt;p&gt; elements within a &lt;div&gt; */
+        }
 
-                  <span class="code-keyword">ul > li {</span>
-                    <span class="code-comment">/* Selects all &lt;li&gt; elements that are direct children of a &lt;ul&gt; */</span>
-                  <span class="code-keyword">}</span>
+        ul > li {
+            /* Selects all &lt;li&gt; elements that are direct children of a &lt;ul&gt; */
+        }
 
-                  <span class="code-keyword">h2 + p {</span>
-                    <span class="code-comment">/* Selects a &lt;p&gt; element that directly follows an &lt;h2&gt; */</span>
-                  <span class="code-keyword">}</span>
+        h2 + p {
+            /* Selects a &lt;p&gt; element that directly follows an &lt;h2&gt; */
+        }
 
-                  <span class="code-keyword">h2 ~ p {</span>
-                    <span class="code-comment">/* Selects all &lt;p&gt; elements that are siblings of an &lt;h2&gt; */</span>
-                  <span class="code-keyword">}</span>
-                </code>
-            </pre>
-        </div>
+        h2 ~ p {
+            /* Selects all &lt;p&gt; elements that are siblings of an &lt;h2&gt; */
+        }
+        </code>
+        </pre>
     </section>
 
     <br>
@@ -350,42 +374,36 @@
         <h2>Lists</h2>
         <hr>
         <h3>Summary</h3>
-        list-style	Sets all the properties for a list in one declaration
-        list-style-image	Specifies an image as the list-item marker
-        list-style-position	Specifies the position of the list-item markers (bullet points)
-        list-style-type	Specifies the type of list-item marker
             <ol>
                 <li><strong>list-style</strong> Sets all the properties for a list in one declaration</li>
                 <li><strong>list-style-image</strong> Specifies an image as the list-item marker</li>
                 <li><strong>list-style-position</strong> Specifies the position of the list-item markers (bullet points)</li>
                 <li><strong>list-style-type</strong> Specifies the type of list-item marker</li>
             </ol>
-        <div class="code-box">
-            <pre>
-                <code>
-                  <span class="code-keyword">ul.a {</span>
-                    list-style-type: circle;
-                  <span class="code-keyword">}</span>
+        <pre>
+        <code class="bg-dark-subtle">
+        ul.a {
+            list-style-type: circle;
+        }
 
-                  <span class="code-keyword">ul.b {</span>
-                    list-style-type: square;
-                  <span class="code-keyword">}</span>
+        ul.b {
+            list-style-type: square;
+        }
 
-                  <span class="code-keyword">ol.c {</span>
-                    list-style-type: upper-roman;
-                  <span class="code-keyword">}</span>
+        ol.c {
+            list-style-type: upper-roman;
+        }
 
-                  <span class="code-keyword">ol.d {</span>
-                    list-style-type: lower-alpha;
-                  <span class="code-keyword">}</span>
+        ol.d {
+            list-style-type: lower-alpha;
+        }
 
-                  <span class="code-comment">/* The list-style property is a shorthand property. It is used to set all the list properties in one declaration: */</span>
-                  <span class="code-keyword">ul {</span>
-                    list-style: square inside url("sqpurple.gif");
-                  <span class="code-keyword">}</span>
-                </code>
-            </pre>
-        </div>
+        /* The list-style property is a shorthand property. It is used to set all the list properties in one declaration: */
+        ul {
+            list-style: square inside url("sqpurple.gif");
+        }
+        </code>
+        </pre>
     </section>
 
     <br>
@@ -406,36 +424,41 @@
             <li><strong>empty-cells</strong> Specifies whether or not to display borders and background on empty cells in a table</li>
             <li><strong>table-layout</strong> Sets the layout algorithm to be used for a table</li>
         </ol>
-        <div class="code-box">
-            <pre>
-                <code>
-                  <span class="code-keyword">table {</span>
-                    width: 100%;
-                  <span class="code-keyword">}</span>
+        <pre>
+        <code class="bg-dark-subtle">
+        table {
+            width: 100%;
+        }
 
-                  <span class="code-keyword">th {</span>
-                    height: 70px;
-                  <span class="code-keyword">}</span>
+        th {
+            height: 70px;
+        }
 
-                  <span class="code-keyword">th {</span>
-                    text-align: left;
-                  <span class="code-keyword">}</span>
+        th {
+            text-align: left;
+        }
 
-                  <span class="code-comment">/* sets the vertical alignment (like top, bottom, or middle) */</span>
-                  <span class="code-keyword">td {</span>
-                    height: 50px;
-                    vertical-align: bottom;
-                  <span class="code-keyword">}</span>
+        /* sets the vertical alignment (like top, bottom, or middle) */
+        td {
+            height: 50px;
+            vertical-align: bottom;
+        }
 
-                  <span class="code-comment">/* color on hover */</span>
-                  <span class="code-keyword">tr:hover {background-color: coral;}</span>
+        /* color on hover */
+        tr:hover {
+            background-color: coral;
+        }
 
-                  <span class="code-comment">/* every even row gets color */</span>
-                  <span class="code-keyword">tr:nth-child(even) {background-color: #f2f2f2;}</span>
-                </code>
-            </pre>
-        </div>
+        /* every even row gets color */
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        </code>
+        </pre>
     </section>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>hljs.highlightAll();</script>
 </body>
 </html>
