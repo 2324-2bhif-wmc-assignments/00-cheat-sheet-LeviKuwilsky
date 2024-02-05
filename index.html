@@ -1,9 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="0;url=CheatSheet.html">
+    <meta charset="UTF-8">
+    <title>Cheat Sheet</title>
+    <link type="text/css" rel="stylesheet" href="Styles/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="Styles/styles.css" />
 </head>
 <body>
-<p>If you are not redirected, <a href="CheatSheet.html">click here</a>.</p>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Herr Chems, was sind 10% von 1000? (es ist 10)</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="answerForm">
+                    <div class="form-group">
+                        <label for="modalpass" class="col-form-label">Answer:</label>
+                        <input type="text" class="form-control" id="modalpass">
+                    </div>
+                </form>
+                <div id="message"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="submitAnswer">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+    $(window).on('load', function() {
+        $('#loginModal').modal('show');
+    });
+
+    $(document).ready(function() {
+        $('#submitAnswer').click(function() {
+            var answer = $('#modalpass').val().trim();
+            if (answer === '10') {
+                $('#message').html('<div class="alert alert-success" role="alert">Korrekt! Du bist jetzt schlau genug für das Cheat sheet!</div>');
+                setTimeout(function() {
+                    $('#loginModal').modal('hide');
+                    // Add your code here to redirect or grant access to the cheat sheet
+                    window.location.href = 'CheatSheet.html';
+                }, 2000);
+            } else {
+                $('#message').html('<div class="alert alert-danger" role="alert">Falsche Antwort! Versuche es nochmal.</div>');
+            }
+        });
+
+        // Prevent form submission on Enter key press
+        $('#answerForm').submit(function(e) {
+            e.preventDefault();
+            $('#submitAnswer').click();
+        });
+    });
+</script>
+
 </body>
 </html>
