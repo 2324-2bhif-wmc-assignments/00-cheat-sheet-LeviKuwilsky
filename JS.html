@@ -35,7 +35,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Bootstrap.html">Bootsrap</a>
+                    <a class="nav-link" href="Bootstrap.html">Bootstrap</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Fun</a>
@@ -61,6 +61,8 @@
     <hr>
     <ul class="menu">
         <li><a href="#basics">Basics</a></li>
+        <li><a href="#es6">ES6</a></li>
+        <li><a href="basic-data-structures">Basic Data Structures</a></li>
     </ul>
     <hr>
 </div>
@@ -792,6 +794,277 @@
             return numbers;
           }
         }
+        </code>
+        </pre>
+    </section>
+
+    <section class="es6">
+        <h2>ES6</h2>
+        <hr>
+        <pre>
+        <code class="bg-dark-subtle">
+        // Compare Scopes of the var and let Keywords
+        var numArray = [];
+        for (var i = 0; i < 3; i++) {
+          numArray.push(i);
+        }
+        console.log(i); // Output: 3
+
+        let anotherNumArray = [];
+        for (let j = 0; j < 3; j++) {
+          anotherNumArray.push(j);
+        }
+        //console.log(j); // ReferenceError: j is not defined
+
+        // Mutate an Array Declared with const
+        const s = [5, 6, 7];
+        function editInPlace() {
+          "use strict";
+          s[0] = 2;
+          s[1] = 5;
+          s[2] = 7;
+        }
+        editInPlace();
+        console.log(s); // Output: [2, 5, 7]
+
+        // Prevent Object Mutation
+        function freezeObj() {
+          "use strict";
+          const MATH_CONSTANTS = {
+            PI: 3.14
+          };
+          Object.freeze(MATH_CONSTANTS);
+          try {
+            MATH_CONSTANTS.PI = 99;
+          } catch (ex) {
+            console.log(ex);
+          }
+          return MATH_CONSTANTS.PI;
+        }
+        const PI_CONST = freezeObj();
+        console.log(PI_CONST); // Output: 3.14
+
+        // Use Arrow Functions to Write Concise Anonymous Functions
+        const magic = () => {
+          return new Date();
+        };
+
+        // Write Arrow Functions with Parameters
+        const myConcat = (arr1, arr2) => {
+          return arr1.concat(arr2);
+        };
+
+        // Set Default Parameters for Your Functions
+        const greeting = (name = "Anonymous") => "Hello " + name;
+
+        // Use the Rest Parameter with Function Parameters
+        const sum = (...args) => {
+          return args.reduce((a, b) => a + b, 0);
+        };
+
+        // Use the Spread Operator to Evaluate Arrays In-Place
+        const arr = [6, 89, 3, 45];
+        const maximus = Math.max(...arr);
+
+        // Use Destructuring Assignment to Extract Values from Objects
+        const user = { name: 'John Doe', age: 34 };
+        const { name, age } = user;
+
+        // Use Destructuring Assignment to Assign Variables from Objects
+        const { name: userName, age: userAge } = user;
+
+        // Use Destructuring Assignment to Assign Variables from Nested Objects
+        const userNested = {
+          johnDoe: {
+            age: 34,
+            email: 'johnDoe@example.com'
+          }
+        };
+        const { johnDoe: { age: userNestedAge, email: userEmail }} = userNested;
+
+        // Use Destructuring Assignment to Assign Variables from Arrays
+        const [a, b] = [1, 2, 3, 4, 5, 6];
+        console.log(a, b); // Output: 1, 2
+
+        // Destructuring via rest elements
+        const [c, d, ...arrRest] = [1, 2, 3, 4, 5, 7];
+        console.log(c, d); // Output: 1, 2
+        console.log(arrRest); // Output: [3, 4, 5, 7]
+
+        // Use Destructuring Assignment to Pass an Object as a Function's Parameters
+        const profileUpdate = (profileData) => {
+          const { name, age, nationality, location } = profileData;
+          // do something with these variables
+        }
+
+        // Create Strings using Template Literals
+        const person = {
+          name: "Zodiac Hasbro",
+          age: 56
+        };
+        const greetingTemplate = `Hello, my name is ${person.name}!
+        I am ${person.age} years old.`;
+
+        // Write Concise Object Literal Declarations Using Object Property Shorthand
+        const getMousePosition = (x, y) => ({
+          x,
+          y
+        });
+
+        // Write Concise Declarative Functions with ES6
+        const personNew = {
+          name: "Taylor",
+          sayHello() {
+            return `Hello! My name is ${this.name}.`;
+          }
+        };
+
+        // Use class Syntax to Define a Constructor Function
+        class Vegetable {
+          constructor(name) {
+            this.name = name;
+          }
+        }
+
+        // Use getters and setters to Control Access to an Object
+        class Thermostat {
+          constructor(temp) {
+            this._temp = temp;
+          }
+          get temperature() {
+            return 5/9 * (this._temp - 32);
+          }
+          set temperature(updatedTemp) {
+            this._temp = updatedTemp;
+          }
+        }
+
+        // Create a Module Script
+        &lt;script type="module" src="index.js"&gt;&lt;/script&gt;
+
+        // Use export to Share a Code Block
+        export const add = (x, y) => {
+          return x + y;
+        };
+
+        // Reuse JavaScript Code Using import
+        import { add } from './math_functions.js';
+
+        // Use * to Import Everything from a File
+        import * as myMathModule from "./math_functions.js";
+
+        // Create an Export Fallback with export default
+        export default function subtract(x, y) {
+          return x - y;
+        }
+
+        // Import a Default Export
+        import subtract from "./math_functions.js";
+
+        // Create a JavaScript Promise
+        const makeServerRequest = new Promise((resolve, reject) => {
+
+        });
+
+        // Complete a Promise with resolve and reject
+        const makeServerRequest2 = new Promise((resolve, reject) => {
+          let responseFromServer;
+          if(responseFromServer) {
+            resolve("We got the data");
+          } else {
+            reject("Data not received");
+          }
+        });
+
+        // Handle a Fulfilled Promise with then
+        makeServerRequest2.then(result => {
+          console.log(result);
+        });
+
+        // Handle a Rejected Promise with catch
+        makeServerRequest2.catch(error => {
+          console.log(error);
+        });
+        </code>
+        </pre>
+    </section>
+
+    <section class="basic-data-structures">
+        <h2>Basic Data Structures</h2>
+        <hr>
+        <pre>
+        <code class="bg-dark-subtle">
+        // Use an Array to Store a Collection of Data
+        let myArray = [];
+
+        // Access an Array's Contents Using Bracket Notation
+        let myData = myArray[0];
+
+        // Add Items to an Array with push() and unshift()
+        myArray.push("someData");
+        myArray.unshift("moreData");
+
+        // Remove Items from an Array with pop() and shift()
+        let removedData = myArray.pop();
+        let removedData2 = myArray.shift();
+
+        // Remove Items Using splice()
+        myArray.splice(index, 1);
+
+        // Add Items Using splice()
+        myArray.splice(index, 0, "newData");
+
+        // Copy Array Items Using slice()
+        let newArray = myArray.slice();
+
+        // Copy an Array with the Spread Operator
+        let copiedArray = [...myArray];
+
+        // Combine Arrays with the Spread Operator
+        let combinedArray = [...myArray1, ...myArray2];
+
+        // Check For The Presence of an Element With indexOf()
+        let index = myArray.indexOf("element");
+
+        // Iterate Through All an Array's Items Using For Loops
+        for (let i = 0; i < myArray.length; i++) {
+          console.log(myArray[i]);
+        }
+
+        // Create complex multi-dimensional arrays
+        let multiDimArray = [
+          [1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]
+        ];
+
+        // Add Key-Value Pairs to JavaScript Objects
+        myObject.key = "value";
+
+        // Modify an Object Nested Within an Object
+        myObject.nestedObject.key = "newValue";
+
+        // Access Property Names with Bracket Notation
+        let value = myObject["key"];
+
+        // Use the delete Keyword to Remove Object Properties
+        delete myObject.key;
+
+        // Check if an Object has a Property
+        if (myObject.hasOwnProperty("key")) {
+          // Do something
+        }
+
+        // Iterate Through the Keys of an Object with a for...in Statement
+        for (let key in myObject) {
+          console.log(key);
+        }
+
+        // Generate an Array of All Object Keys with Object.keys()
+        let keysArray = Object.keys(myObject);
+
+        // Modify an Array Stored in an Object
+        myObject.arrayProperty.push("newValue");
         </code>
         </pre>
     </section>
